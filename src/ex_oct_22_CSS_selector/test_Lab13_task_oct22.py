@@ -26,8 +26,9 @@ def test_item_and_price_listing_ebay():
     #<div class="s-item__title"><span role="heading" aria-level="3"><!--F#f_0-->Shop on eBay<!--F/--></span></div>
     list_of_items=driver.find_elements(By.CSS_SELECTOR,"div[class='s-item__title']")
     list_of_prices=driver.find_elements(By.CSS_SELECTOR, "span[class='s-item__price']")
-    for i in list_of_items:
-        print(i.text)
+    #print(list_of_prices)
+    for item, price in zip(list_of_items,list_of_prices):
+        print(str(item) + "   ||   " + str(price))
 
 
     time.sleep(5)

@@ -24,7 +24,7 @@ def test_registration_page_automation():
     #Finding "E-mail" web element
     #<input type="email" name="email" value="" placeholder="E-Mail" id="input-email" class="form-control">
     web_element_email = driver.find_element(By.NAME, "email")
-    web_element_email.send_keys("sp1212@gmail.com")
+    web_element_email.send_keys("sfplknjbftdxc@gmail.com")
 
     # Finding "Telephone" web element
     #<input type="tel" name="telephone" value="" placeholder="Telephone" id="input-telephone" class="form-control">

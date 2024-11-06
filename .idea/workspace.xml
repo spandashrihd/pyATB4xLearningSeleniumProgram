@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="339bf49c-a6e4-41ca-834e-995f6e67a995" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_oct26/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab26_handling_timeout_exception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_oct26_Actions/test_task_3_oct_26.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_task_oct24.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct26/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,7 @@
     "Python tests.Python tests for test_Lab12.test_xpath_example.executor": "Run",
     "Python tests.Python tests for test_Lab13.test_item_and_price_listing_ebay.executor": "Run",
     "Python tests.Python tests for test_Lab13.test_xpath_example.executor": "Run",
+    "Python tests.Python tests for test_Lab13_task_oct22.test_item_and_price_listing_ebay.executor": "Run",
     "Python tests.Python tests for test_Lab14.test_implicit_wait_example.executor": "Run",
     "Python tests.Python tests for test_Lab15.test_explicit_wait_example.executor": "Run",
     "Python tests.Python tests for test_Lab15.test_negative_vwo_login_project2.executor": "Run",
@@ -76,77 +76,89 @@
     "Python tests.Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_handle_stale_exception_verification.executor": "Run",
     "Python tests.Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_stale_exception_verification.executor": "Run",
     "Python tests.Python tests for test_Lab26_handling_timeout_exception.test_handle_timeout_exception_verification.executor": "Run",
+    "Python tests.Python tests for test_Lab32_Selenium_actions_windows_js.test_verify_action_windows_js.executor": "Run",
+    "Python tests.Python tests for test_Lab32_Selenium_actions_windows_js.test_verify_js.executor": "Run",
+    "Python tests.Python tests for test_Lab34_selenium_JS_P2.test_verify_js_window_scroll.executor": "Run",
     "Python tests.Python tests for test_Lb002.test_sample.executor": "Run",
+    "Python tests.Python tests for test_oct26_task_2.test_verify_drag.executor": "Run",
+    "Python tests.Python tests for test_task_3_oct_26.test_verify_actions_spicejet.executor": "Run",
+    "Python tests.Python tests for test_task_3_oct_26.test_verify_spicejet_actions.executor": "Run",
     "Python tests.Python tests for test_task_Selenium_script.test_verify_katalon_page.executor": "Run",
     "Python tests.Python tests for test_task_oct19.test_registration_page_automation.executor": "Run",
+    "Python tests.Python tests for test_task_oct24.test_button_verification.executor": "Run",
     "Python tests.Python tests for test_task_oct_17.test_task_katalon_current_url_verification.executor": "Run",
+    "Python tests.Python tests in test_oct26_task#2.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/win10/PycharmProjects/pyATB4xLearningSeleniumProgram"
+    "last_opened_file_path": "C:/Users/win10/PycharmProjects/pyATB4xLearningSeleniumProgram",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for test_Lab26_handling_timeout_exception.test_handle_timeout_exception_verification">
-    <configuration name="Python tests for test_Lab23_Selenium_Exception_handle.test_exception_verification" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_task_3_oct_26.test_verify_spicejet_actions">
+    <configuration name="Python tests for src.ex_oct26_Actions.test_oct26_task_2" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="pyATB4xLearningSeleniumProgram" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct_24_selenium" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct26_Actions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Lab23_Selenium_Exception_handle.test_exception_verification&quot;" />
+      <option name="_new_target" value="&quot;src.ex_oct26_Actions.test_oct26_task_2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_Lab24_Selenium_StaleException.test_stale_exception_verification" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_oct26_task_2.test_verify_drag" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pyATB4xLearningSeleniumProgram" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct_24_selenium" />
+      <option name="SDK_NAME" value="Python 3.12 (pyATB4xLearningSeleniumProgram)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct26_Actions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Lab24_Selenium_StaleException.test_stale_exception_verification&quot;" />
+      <option name="_new_target" value="&quot;test_oct26_task_2.test_verify_drag&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_handle_stale_exception_verification" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_task_3_oct_26.test_verify_actions_spicejet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pyATB4xLearningSeleniumProgram" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct_24_selenium" />
+      <option name="SDK_NAME" value="Python 3.12 (pyATB4xLearningSeleniumProgram)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct26_Actions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Lab25_Selenium_handling_Stale_Exception.test_handle_stale_exception_verification&quot;" />
+      <option name="_new_target" value="&quot;test_task_3_oct_26.test_verify_actions_spicejet&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_stale_exception_verification" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_task_3_oct_26.test_verify_spicejet_actions" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pyATB4xLearningSeleniumProgram" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct_24_selenium" />
+      <option name="SDK_NAME" value="Python 3.12 (pyATB4xLearningSeleniumProgram)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct26_Actions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Lab25_Selenium_handling_Stale_Exception.test_stale_exception_verification&quot;" />
+      <option name="_new_target" value="&quot;test_task_3_oct_26.test_verify_spicejet_actions&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_Lab26_handling_timeout_exception.test_handle_timeout_exception_verification" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_task_oct24.test_button_verification" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pyATB4xLearningSeleniumProgram" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,17 +169,66 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Lab26_handling_timeout_exception.test_handle_timeout_exception_verification&quot;" />
+      <option name="_new_target" value="&quot;test_task_oct24.test_button_verification&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_oct26_task_2.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pyATB4xLearningSeleniumProgram" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ex_oct26_Actions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="pyATB4xLearningSeleniumProgram" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (pyATB4xLearningSeleniumProgram)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="pyATB4xLearningSeleniumProgram" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (pyATB4xLearningSeleniumProgram)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_Lab26_handling_timeout_exception.test_handle_timeout_exception_verification" />
-        <item itemvalue="Python tests.Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_handle_stale_exception_verification" />
-        <item itemvalue="Python tests.Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_stale_exception_verification" />
-        <item itemvalue="Python tests.Python tests for test_Lab24_Selenium_StaleException.test_stale_exception_verification" />
-        <item itemvalue="Python tests.Python tests for test_Lab23_Selenium_Exception_handle.test_exception_verification" />
+        <item itemvalue="Python tests.Python tests for test_task_3_oct_26.test_verify_spicejet_actions" />
+        <item itemvalue="Python tests.Python tests for test_task_3_oct_26.test_verify_actions_spicejet" />
+        <item itemvalue="Python tests.Python tests for test_oct26_task_2.test_verify_drag" />
+        <item itemvalue="Python tests.Python tests for test_task_oct24.test_button_verification" />
+        <item itemvalue="Python tests.Python tests in test_oct26_task_2.py" />
       </list>
     </recent_temporary>
   </component>
@@ -212,14 +273,14 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab17.py</url>
           <line>8</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
