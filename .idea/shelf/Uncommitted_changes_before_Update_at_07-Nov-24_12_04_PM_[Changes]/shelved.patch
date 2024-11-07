@@ -1,0 +1,1854 @@
+Index: src/ex_oct_24_selenium/test_Lab22_Selenium_Exception.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab22_Selenium_Exception.py b/src/ex_oct_24_selenium/test_Lab22_Selenium_Exception.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab22_Selenium_Exception.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,20 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-
+-@allure.title("Exceptions")
+-@allure.description("Verify Exceptions")
+-def test_exception_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://app.vwo.com/")
+-   web_element = driver.find_element(By.ID, "this is not a ID")
+-
+-   #response = {'status': 404, 'value': '{"value":{"error":"no such element",
+-   # "message":"no such element: Unable to locate element: {\...07FF6E343EB79]\\n\\tBaseThreadInitThunk [0x00007FFA73407374+20]\\n\\tRtlUserThreadStart [0x00007FFA749BCC91+33]\\n"}}'}
+-
+-   #NoSuchElementException
+-
+-
+-
+-   time.sleep(5)
+\ No newline at end of file
+Index: src/ex_oct_20_Locators/test_Lab11.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_20_Locators/test_Lab11.py b/src/ex_oct_20_Locators/test_Lab11.py
+deleted file mode 100644
+--- a/src/ex_oct_20_Locators/test_Lab11.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,28 +0,0 @@
+-import time
+-
+-from selenium import webdriver
+-import allure
+-import pytest
+-from selenium.webdriver.common.by import By
+-
+-@pytest.mark.positive
+-@allure.title("List all the buttons by using TAG_NAME")
+-@allure.description("Verify that all buttons are printing using TAG_NAME")
+-def test_tag_name_verification():
+-    driver=webdriver.Chrome()
+-    driver.get("https://app.vwo.com/#/login")
+-
+-    #find all the buttons in the page
+-    buttons=driver.find_elements(By.TAG_NAME, "button")
+-    print(len(buttons))
+-    for i in buttons:
+-        print(i.text)
+-
+-    #find all the links in the page
+-    all_links=driver.find_elements(By.TAG_NAME, "a")
+-    print(len(all_links))
+-    for i in all_links:
+-        print(i.text)
+-
+-    time.sleep(5)
+-    driver.quit()
+Index: allure_result/96032b68-7686-4c9a-8403-517788e950b3-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/96032b68-7686-4c9a-8403-517788e950b3-container.json b/allure_result/96032b68-7686-4c9a-8403-517788e950b3-container.json
+deleted file mode 100644
+--- a/allure_result/96032b68-7686-4c9a-8403-517788e950b3-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "dda23b54-1367-4e00-876b-6fb068413c87", "children": ["e995210c-6191-4515-a18a-a1987fc34cb9"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729337006722, "stop": 1729337007082}], "start": 1729337006722, "stop": 1729337110937}
+\ No newline at end of file
+Index: =/5d174353-d168-448f-b347-21f1f1aa42e9-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/=/5d174353-d168-448f-b347-21f1f1aa42e9-result.json b/=/5d174353-d168-448f-b347-21f1f1aa42e9-result.json
+deleted file mode 100644
+--- a/=/5d174353-d168-448f-b347-21f1f1aa42e9-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "Verify the current url of the web page google.com", "status": "failed", "statusDetails": {"message": "AssertionError: assert 'https://www.google.com/' == 'https://google.com'\n  \n  - https://google.com\n  + https://www.google.com/\n  ?         ++++          +", "trace": "@allure.title(\"Verify the current url of the web page google.com\")\n    def test_sample():\n        driver=webdriver.Edge()\n        driver.get(\"https://google.com\")\n>       assert driver.current_url == \"https://google.com\"\nE       AssertionError: assert 'https://www.google.com/' == 'https://google.com'\nE         \nE         - https://google.com\nE         + https://www.google.com/\nE         ?         ++++          +\n\nsrc\\ex_oct_16\\test_Lb002.py:9: AssertionError"}, "start": 1729176075802, "stop": 1729176188425, "uuid": "dab5a10b-e55f-4a56-a55e-e6b92f5c4fec", "historyId": "3a5877d18dbeb38b2e2d6b8c953fa841", "testCaseId": "3a5877d18dbeb38b2e2d6b8c953fa841", "fullName": "src.ex_oct_16.test_Lb002#test_sample", "labels": [{"name": "parentSuite", "value": "src.ex_oct_16"}, {"name": "suite", "value": "test_Lb002"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "6208-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_16.test_Lb002"}]}
+\ No newline at end of file
+Index: allure_result/9dbaf7c1-f712-4c58-a780-161dc9d1f46f-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/9dbaf7c1-f712-4c58-a780-161dc9d1f46f-result.json b/allure_result/9dbaf7c1-f712-4c58-a780-161dc9d1f46f-result.json
+deleted file mode 100644
+--- a/allure_result/9dbaf7c1-f712-4c58-a780-161dc9d1f46f-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_current_url_verification_chrome", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: DevToolsActivePort file doesn't exist\nStacktrace:\n\tGetHandleVerifier [0x00007FF776D3E1F5+2972373]\n\t(No symbol) [0x00007FF7769D55F0]\n\t(No symbol) [0x00007FF7768757FA]\n\t(No symbol) [0x00007FF7768B2C65]\n\t(No symbol) [0x00007FF7768ADAA5]\n\t(No symbol) [0x00007FF7768A8D6E]\n\t(No symbol) [0x00007FF7768F6CA1]\n\t(No symbol) [0x00007FF7768F6320]\n\t(No symbol) [0x00007FF7768EB823]\n\t(No symbol) [0x00007FF7768B75E8]\n\t(No symbol) [0x00007FF7768B8751]\n\tGetHandleVerifier [0x00007FF776D647BD+3129501]\n\tGetHandleVerifier [0x00007FF776DB4D00+3458528]\n\tGetHandleVerifier [0x00007FF776DAB05D+3418429]\n\tGetHandleVerifier [0x00007FF776B3687B+844123]\n\t(No symbol) [0x00007FF7769E0AFF]\n\t(No symbol) [0x00007FF7769DC6D4]\n\t(No symbol) [0x00007FF7769DC86D]\n\t(No symbol) [0x00007FF7769CBD79]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "def test_current_url_verification_chrome():\n>       driver=webdriver.Chrome()\n\nsrc\\ex_oct_17\\test_Lab07.py:6: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py:45: in __init__\n    super().__init__(\n.venv\\lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py:66: in __init__\n    super().__init__(command_executor=executor, options=options)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:212: in __init__\n    self.start_session(capabilities)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:299: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000029AAF7091B0>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created: DevToolsActivePort f...07FF7769CBD79]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created: DevToolsActivePort file doesn't exist\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF776D3E1F5+2972373]\nE       \t(No symbol) [0x00007FF7769D55F0]\nE       \t(No symbol) [0x00007FF7768757FA]\nE       \t(No symbol) [0x00007FF7768B2C65]\nE       \t(No symbol) [0x00007FF7768ADAA5]\nE       \t(No symbol) [0x00007FF7768A8D6E]\nE       \t(No symbol) [0x00007FF7768F6CA1]\nE       \t(No symbol) [0x00007FF7768F6320]\nE       \t(No symbol) [0x00007FF7768EB823]\nE       \t(No symbol) [0x00007FF7768B75E8]\nE       \t(No symbol) [0x00007FF7768B8751]\nE       \tGetHandleVerifier [0x00007FF776D647BD+3129501]\nE       \tGetHandleVerifier [0x00007FF776DB4D00+3458528]\nE       \tGetHandleVerifier [0x00007FF776DAB05D+3418429]\nE       \tGetHandleVerifier [0x00007FF776B3687B+844123]\nE       \t(No symbol) [0x00007FF7769E0AFF]\nE       \t(No symbol) [0x00007FF7769DC6D4]\nE       \t(No symbol) [0x00007FF7769DC86D]\nE       \t(No symbol) [0x00007FF7769CBD79]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: SessionNotCreatedException"}, "start": 1729337219084, "stop": 1729337310622, "uuid": "61a1b93a-7e41-44da-8f98-e0526fff6719", "historyId": "b4bb1a6021d5cf28dc16e81b61547349", "testCaseId": "b4bb1a6021d5cf28dc16e81b61547349", "fullName": "src.ex_oct_17.test_Lab07#test_current_url_verification_chrome", "labels": [{"name": "parentSuite", "value": "src.ex_oct_17"}, {"name": "suite", "value": "test_Lab07"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "13380-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_17.test_Lab07"}]}
+\ No newline at end of file
+Index: src/ex_oct_16_selenium/test_task_Selenium_script.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_16_selenium/test_task_Selenium_script.py b/src/ex_oct_16_selenium/test_task_Selenium_script.py
+deleted file mode 100644
+--- a/src/ex_oct_16_selenium/test_task_Selenium_script.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,12 +0,0 @@
+-from selenium import webdriver
+-import pytest
+-import allure
+-
+-def test_verify_katalon_page():
+-    driver=webdriver.Chrome()
+-    driver.get("https://katalon-demo-cura.herokuapp.com/")
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+-    print(driver.title)
+-    page_source_data=driver.page_source
+-    assert 'CURA Healthcare Service' in page_source_data
+-    driver.quit()
+\ No newline at end of file
+Index: src/ex_oct_17_webdriver/test_task_oct_17.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/test_task_oct_17.py b/src/ex_oct_17_webdriver/test_task_oct_17.py
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/test_task_oct_17.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,47 +0,0 @@
+-from selenium import webdriver
+-import time
+-from selenium.webdriver.common.by import By
+-
+-def test_task_katalon_current_url_verification():
+-    driver=webdriver.Chrome()
+-    driver.get("https://katalon-demo-cura.herokuapp.com")
+-
+-    # 1.Find the element of anchor tag
+-    # 2.We need to find the unique attribute, which can find the web element
+-        # <a
+-        # id="btn-make-appointment" 
+-        # href="./profile.php#login" 
+-        # class="btn btn-dark btn-lg">
+-        # Make Appointment
+-        # </a>
+-    make_appointment_element=driver.find_element(By.ID, "btn-make-appointment")
+-
+-    # 3.click on it
+-    make_appointment_element.click()
+-
+-    # 4.Verify the URL
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/profile.php#login"
+-    time.sleep(10)
+-
+-    #find username web element
+-    # <input type="text" class="form-control" id="txt-username" name="username" placeholder="Username" value="" autocomplete="off">
+-    username=driver.find_element(By.NAME, "username")
+-    username.send_keys("John Doe")
+-
+-    #find password web element
+-    # < input type = "password" class ="form-control" id="txt-password" name="password" placeholder="Password" value="" autocomplete="off" >
+-
+-    password= driver.find_element(By.NAME, "password")
+-    password.send_keys("ThisIsNotAPassword")
+-
+-    #find Login button web element
+-    #<button id="btn-login" type="submit" class="btn btn-default">Login</button>
+-    login=driver.find_element(By.ID,"btn-login")
+-    login.click()
+-
+-    time.sleep(10)
+-
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/#appointment"
+-
+-    driver.quit()
+-
+Index: allure_result/844ea466-ffc9-460f-93f6-05c1b5856d93-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/844ea466-ffc9-460f-93f6-05c1b5856d93-container.json b/allure_result/844ea466-ffc9-460f-93f6-05c1b5856d93-container.json
+deleted file mode 100644
+--- a/allure_result/844ea466-ffc9-460f-93f6-05c1b5856d93-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "606a499b-bcc4-424c-bfd8-17cb431f62e5", "children": ["90ebbeb3-786d-4a16-97eb-31dbc51eb553"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729337215225, "stop": 1729337219037}], "start": 1729337215225, "stop": 1729337326546}
+\ No newline at end of file
+Index: src/ex_oct_17_webdriver/test_Lab07.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/test_Lab07.py b/src/ex_oct_17_webdriver/test_Lab07.py
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/test_Lab07.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,27 +0,0 @@
+-from selenium import webdriver
+-import time
+-
+-#using Chrome browser
+-def test_current_url_verification_chrome():
+-    driver=webdriver.Chrome()
+-    driver.get("https://katalon-demo-cura.herokuapp.com/")
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+-    time.sleep(10)
+-    driver.quit()
+-
+-#using Edge browser
+-def test_edge_current_url_verification_chrome():
+-    driver=webdriver.Edge()
+-    driver.get("https://katalon-demo-cura.herokuapp.com/")
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+-    time.sleep(10)
+-    driver.quit()
+-
+-#using Firefox browser
+-def test_firefox_current_url_verification_chrome():
+-    driver=webdriver.Firefox()
+-    driver.get("https://katalon-demo-cura.herokuapp.com/")
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+-    time.sleep(10)
+-    driver.quit()
+-
+Index: src/ex_oct_17_webdriver/test_Lab08.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/test_Lab08.py b/src/ex_oct_17_webdriver/test_Lab08.py
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/test_Lab08.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,28 +0,0 @@
+-from selenium import webdriver
+-import time
+-from selenium.webdriver.common.by import By
+-
+-#using Chrome browser
+-def test_katalon_current_url_verification():
+-    driver=webdriver.Chrome()
+-    driver.get("https://katalon-demo-cura.herokuapp.com")
+-
+-    # 1.Find the element of anchor tag
+-    #this function find the element by locator
+-    # 2.we need to find the unique attribute, which can find the web element
+-    # <a
+-    # id = "btn-make-appointment"
+-    # href = "./profile.php#login"
+-    # class ="btn btn-dark btn-lg" >
+-    # Make Appointment
+-    # <a/>
+-
+-    make_appointment_element=driver.find_element(By.ID, "btn-make-appointment")
+-
+-    # 3.Click() on it
+-    make_appointment_element.click()
+-
+-    # 4.Verify that URL changes
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/profile.php#login"
+-    time.sleep(10)
+-    driver.quit()
+Index: allure_result/9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt b/allure_result/9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt
+deleted file mode 100644
+--- a/allure_result/9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,2 +0,0 @@
+-https://katalon-demo-cura.herokuapp.com/
+-CURA Healthcare Service
+Index: src/ex_oct_24_selenium/test_Lab19_select.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab19_select.py b/src/ex_oct_24_selenium/test_Lab19_select.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab19_select.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,25 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-from selenium.webdriver.support.ui import WebDriverWait
+-from selenium.webdriver.support import expected_conditions as EC
+-from selenium.webdriver.support.ui import Select
+-
+-@allure.title("Select")
+-@allure.description("Verify Select")
+-def test_select_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://the-internet.herokuapp.com/dropdown")
+-
+-   #ID = "dropdown"
+-   select_html_tag = driver.find_element(By.ID, "dropdown")
+-   select_options = Select(select_html_tag)
+-
+-   select_options.select_by_visible_text("Option 2")
+-
+-   #usually index 0: select an option, 1: option 1, 2: option2
+-   #select_options.select_by_index(1)
+-
+-   time.sleep(5)
+-
+Index: src/ex_oct26_Actions/test_oct26_task_2.py
+===================================================================
+diff --git a/src/ex_oct26_Actions/test_oct26_task_2.py b/src/ex_oct26_Actions/test_oct26_task_2.py
+deleted file mode 100644
+--- a/src/ex_oct26_Actions/test_oct26_task_2.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,24 +0,0 @@
+-import time
+-import allure
+-from selenium  import webdriver
+-from selenium.webdriver.common.action_chains import ActionChains
+-from selenium.webdriver.common.by import By
+-
+-
+-@allure.title("Drag and drop exercise")
+-@allure.description("Verify drag and drop functions")
+-def test_verify_drag_and_drop():
+-    driver = webdriver.Chrome()
+-    driver.get("https://awesomeqa.com/selenium/mouse_interaction.html")
+-
+-    #draggable element
+-    draggable_ele = driver.find_element(By.XPATH, "//div[@id='draggable']")
+-
+-    #Droppable element
+-    drop_ele = driver.find_element(By.XPATH, "//div[@id='droppable']")
+-
+-    #drag and drop actions
+-    ActionChains(driver).drag_and_drop(draggable_ele,drop_ele).perform()
+-
+-    time.sleep(10)
+-    driver.quit()
+\ No newline at end of file
+Index: allure_result/262cda14-e417-41a4-96b9-84e90a96c127-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/262cda14-e417-41a4-96b9-84e90a96c127-container.json b/allure_result/262cda14-e417-41a4-96b9-84e90a96c127-container.json
+deleted file mode 100644
+--- a/allure_result/262cda14-e417-41a4-96b9-84e90a96c127-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "2ad1a659-60fc-4f2b-a1fb-016799096530", "children": ["7ff33ef4-1cbf-45c1-b79b-ceef35accbe2"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729246549553, "stop": 1729246553937}], "start": 1729246549553, "stop": 1729246792904}
+\ No newline at end of file
+Index: allure_result/3f49d02d-0bc5-4f85-8060-0e496296bc70-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/3f49d02d-0bc5-4f85-8060-0e496296bc70-result.json b/allure_result/3f49d02d-0bc5-4f85-8060-0e496296bc70-result.json
+deleted file mode 100644
+--- a/allure_result/3f49d02d-0bc5-4f85-8060-0e496296bc70-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_verify_katalon_page", "status": "passed", "attachments": [{"name": "stdout", "source": "9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt", "type": "text/plain"}], "start": 1729246554015, "stop": 1729246792790, "uuid": "7ff33ef4-1cbf-45c1-b79b-ceef35accbe2", "historyId": "a213b49a81f97ca64ce8f4a607a1df93", "testCaseId": "a213b49a81f97ca64ce8f4a607a1df93", "fullName": "src.ex_oct_16.test_task_Selenium_script#test_verify_katalon_page", "labels": [{"name": "parentSuite", "value": "src.ex_oct_16"}, {"name": "suite", "value": "test_task_Selenium_script"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "14380-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_16.test_task_Selenium_script"}]}
+\ No newline at end of file
+Index: src/ex_oct_20_Locators/test_Lab08.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_20_Locators/test_Lab08.py b/src/ex_oct_20_Locators/test_Lab08.py
+deleted file mode 100644
+--- a/src/ex_oct_20_Locators/test_Lab08.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,40 +0,0 @@
+-from selenium import webdriver
+-import time
+-from selenium.webdriver.common.by import By
+-import pytest
+-import allure
+-
+-@pytest.mark.negative
+-@allure.title("Verify Negative Testcase - app.vwo.com - Wrong Email/Password -Error Message.")
+-@allure.description("Verify that if email/password is wrong, we will et a message")
+-def test_negative_vwo_login_project2():
+-    driver=webdriver.Chrome()
+-    driver.get("https://app.vwo.com/#/login")
+-    #find an element-email
+-    #<input type="email" class="text-input W(100%)" name="username" id="login-username" data-qa="hocewoqisi">
+-    web_element_username=driver.find_element(By.ID, "login-username")
+-    web_element_username.send_keys("abc@gmail.com")
+-
+-
+-    #find an element-password
+-    #<input type="password" class="text-input W(100%)" name="password" id="login-password" data-qa="jobodapuxe">
+-    #in this case class name is not unique bcz W(100), if we open this page in ipad its W(80), in our case class name change wit resolution
+-    web_element_password=driver.find_element(By.NAME,"password")
+-    web_element_password.send_keys("password@1234")
+-
+-    #click on Sign in Button
+-    #<button id="js-sso-login-btn" type="submit" class="btn btn--positive btn--inverted" value="Sign in" onclick="login.loginUsingSSO(event)" data-qa="suregonici">
+-    web_element_signin_btn=driver.find_element(By.ID, "js-sso-login-btn")
+-    web_element_signin_btn.click()
+-
+-    time.sleep(5)
+-
+-    #verify that message is visible
+-    #<div class="notification-box-description" id="js-notification-box-msg" data-qa="rixawilomi">Your email, password, IP address or location did not match</div>
+-    web_element_message=driver.find_element(By.CLASS_NAME,"notification-box-description")
+-    assert web_element_message.text == "Your email, password, IP address or location did not match"
+-
+-    time.sleep(5)
+-    driver.quit()
+-
+-
+Index: =/b27c0650-42a3-4bb4-b966-539e4119405b-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/=/b27c0650-42a3-4bb4-b966-539e4119405b-container.json b/=/b27c0650-42a3-4bb4-b966-539e4119405b-container.json
+deleted file mode 100644
+--- a/=/b27c0650-42a3-4bb4-b966-539e4119405b-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "56e64898-c306-43b9-96a1-8169f91fa1dc", "children": ["dab5a10b-e55f-4a56-a55e-e6b92f5c4fec"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729176075380, "stop": 1729176075771}], "start": 1729176075380, "stop": 1729176193864}
+\ No newline at end of file
+Index: =/f192781a-7783-42ed-9322-8bd8fb278a47-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/=/f192781a-7783-42ed-9322-8bd8fb278a47-container.json b/=/f192781a-7783-42ed-9322-8bd8fb278a47-container.json
+deleted file mode 100644
+--- a/=/f192781a-7783-42ed-9322-8bd8fb278a47-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "a018b569-fcfd-4b15-a0b1-d0c56677745d", "children": ["4cc7197c-9687-40c9-a461-fba09c72095d"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729176367659, "stop": 1729176368203}], "start": 1729176367659, "stop": 1729176754537}
+\ No newline at end of file
+Index: src/ex_oct_16_selenium/test_Lab01.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_16_selenium/test_Lab01.py b/src/ex_oct_16_selenium/test_Lab01.py
+deleted file mode 100644
+--- a/src/ex_oct_16_selenium/test_Lab01.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,9 +0,0 @@
+-from selenium import webdriver
+-import allure
+-import pytest
+-
+-@allure.title("Verify the Title of the web page app.vwo.com")
+-def test_sample():
+-    driver=webdriver.Chrome()
+-    driver.get("https://sdet.live")
+-
+Index: src/ex_oct_17_webdriver/test_Lab04.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/test_Lab04.py b/src/ex_oct_17_webdriver/test_Lab04.py
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/test_Lab04.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,9 +0,0 @@
+-from selenium import webdriver
+-
+-def test_open_vwo_loin():
+-    driver=webdriver.Chrome()  #it will create the Session -1acc1dc25946622cd0d0970cebbd76b8
+-    driver.get("https://app.vwo.com")   #navigate to URL
+-    page_source_data= driver.page_source
+-    print(page_source_data)
+-    print(driver.session_id)
+-
+Index: src/ex_oct_20_Locators/test_Lab10.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_20_Locators/test_Lab10.py b/src/ex_oct_20_Locators/test_Lab10.py
+deleted file mode 100644
+--- a/src/ex_oct_20_Locators/test_Lab10.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,24 +0,0 @@
+-import time
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-import pytest
+-import allure
+-
+-@pytest.mark.positive
+-@allure.title("Positive Testcase - app.vwo.com start a free trail link(partial link text) verification")
+-@allure.description("Verify that Free Trail Button clicked, navigate to next page using partial link text")
+-def test_positive_vwo_free_trial__partial_link_text_project3():
+-    driver=webdriver.Chrome()
+-    driver.get("https://app.vwo.com/#/login")
+-    #find start a free trial element
+-    #<a href="https://vwo.com/free-trial/?utm_medium=website&amp;utm_source=login-page&amp;utm_campaign=mof_eg_loginpage" class="text-link" data-qa="bericafeqo">Start a free trial</a>
+-    #PARTIAL_LINK_TEXT = Contains
+-
+-    anchor_tag_element_link=driver.find_element(By.PARTIAL_LINK_TEXT, "free trial")
+-    anchor_tag_element_link.click()
+-
+-    assert driver.current_url == "https://vwo.com/free-trial/?utm_medium=website&utm_source=login-page&utm_campaign=mof_eg_loginpage"
+-
+-    driver.back()   #go back to login page
+-    time.sleep(5)
+-    driver.quit()
+\ No newline at end of file
+Index: Katolon_Selenium_IDE.side
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Katolon_Selenium_IDE.side b/Katolon_Selenium_IDE.side
+deleted file mode 100644
+--- a/Katolon_Selenium_IDE.side	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,122 +0,0 @@
+-{
+-  "id": "f4b8e7b3-f19c-464c-92a0-637e1607012f",
+-  "version": "2.0",
+-  "name": "Katolon",
+-  "url": "https://katalon-demo-cura.herokuapp.com",
+-  "tests": [{
+-    "id": "a6e2071e-e74f-4c82-a825-e293f2a84e3a",
+-    "name": "Login_negative",
+-    "commands": [{
+-      "id": "266a78a6-de5a-47fa-b900-49c14d046eff",
+-      "comment": "",
+-      "command": "open",
+-      "target": "/",
+-      "targets": [],
+-      "value": ""
+-    }, {
+-      "id": "cb64f818-8794-46eb-8393-859948aef0d1",
+-      "comment": "",
+-      "command": "setWindowSize",
+-      "target": "1600x852",
+-      "targets": [],
+-      "value": ""
+-    }, {
+-      "id": "727de261-6e80-4e0b-86cc-a231e5d32a96",
+-      "comment": "",
+-      "command": "click",
+-      "target": "id=btn-make-appointment",
+-      "targets": [
+-        ["id=btn-make-appointment", "id"],
+-        ["linkText=Make Appointment", "linkText"],
+-        ["css=#btn-make-appointment", "css:finder"],
+-        ["xpath=//a[contains(text(),'Make Appointment')]", "xpath:link"],
+-        ["xpath=//a[@id='btn-make-appointment']", "xpath:attributes"],
+-        ["xpath=//header[@id='top']/div/a", "xpath:idRelative"],
+-        ["xpath=//a[contains(@href, './profile.php#login')]", "xpath:href"],
+-        ["xpath=//div/a", "xpath:position"],
+-        ["xpath=//a[contains(.,'Make Appointment')]", "xpath:innerText"]
+-      ],
+-      "value": ""
+-    }, {
+-      "id": "619202ae-e5e4-419b-a09e-d2501f723ef3",
+-      "comment": "",
+-      "command": "click",
+-      "target": "id=txt-username",
+-      "targets": [
+-        ["id=txt-username", "id"],
+-        ["name=username", "name"],
+-        ["css=#txt-username", "css:finder"],
+-        ["xpath=//input[@id='txt-username']", "xpath:attributes"],
+-        ["xpath=//section[@id='login']/div/div/div[2]/form/div[2]/div/input", "xpath:idRelative"],
+-        ["xpath=//div[2]/div/input", "xpath:position"]
+-      ],
+-      "value": ""
+-    }, {
+-      "id": "2b0bda64-9ed3-421b-84c6-600fdbfefce7",
+-      "comment": "",
+-      "command": "type",
+-      "target": "id=txt-username",
+-      "targets": [
+-        ["id=txt-username", "id"],
+-        ["name=username", "name"],
+-        ["css=#txt-username", "css:finder"],
+-        ["xpath=//input[@id='txt-username']", "xpath:attributes"],
+-        ["xpath=//section[@id='login']/div/div/div[2]/form/div[2]/div/input", "xpath:idRelative"],
+-        ["xpath=//div[2]/div/input", "xpath:position"]
+-      ],
+-      "value": "spandashrihd@gmail.com "
+-    }, {
+-      "id": "153a0c1e-b042-44ba-80a6-51b143815265",
+-      "comment": "",
+-      "command": "click",
+-      "target": "id=txt-password",
+-      "targets": [
+-        ["id=txt-password", "id"],
+-        ["name=password", "name"],
+-        ["css=#txt-password", "css:finder"],
+-        ["xpath=//input[@id='txt-password']", "xpath:attributes"],
+-        ["xpath=//section[@id='login']/div/div/div[2]/form/div[3]/div/input", "xpath:idRelative"],
+-        ["xpath=//div[3]/div/input", "xpath:position"]
+-      ],
+-      "value": ""
+-    }, {
+-      "id": "b7e100c0-78f6-4cec-9cce-fb668ecb26e1",
+-      "comment": "",
+-      "command": "type",
+-      "target": "id=txt-password",
+-      "targets": [
+-        ["id=txt-password", "id"],
+-        ["name=password", "name"],
+-        ["css=#txt-password", "css:finder"],
+-        ["xpath=//input[@id='txt-password']", "xpath:attributes"],
+-        ["xpath=//section[@id='login']/div/div/div[2]/form/div[3]/div/input", "xpath:idRelative"],
+-        ["xpath=//div[3]/div/input", "xpath:position"]
+-      ],
+-      "value": "Amith@13"
+-    }, {
+-      "id": "0806241e-a760-4f31-9c4d-f4617b9644ae",
+-      "comment": "",
+-      "command": "click",
+-      "target": "id=btn-login",
+-      "targets": [
+-        ["id=btn-login", "id"],
+-        ["css=#btn-login", "css:finder"],
+-        ["xpath=//button[@id='btn-login']", "xpath:attributes"],
+-        ["xpath=//section[@id='login']/div/div/div[2]/form/div[4]/div/button", "xpath:idRelative"],
+-        ["xpath=//button", "xpath:position"],
+-        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+-      ],
+-      "value": ""
+-    }]
+-  }],
+-  "suites": [{
+-    "id": "737ed497-cc62-411b-a1bc-5ecef542bc12",
+-    "name": "Default Suite",
+-    "persistSession": false,
+-    "parallel": false,
+-    "timeout": 300,
+-    "tests": ["a6e2071e-e74f-4c82-a825-e293f2a84e3a"]
+-  }],
+-  "urls": ["https://katalon-demo-cura.herokuapp.com/"],
+-  "plugins": []
+-}
+\ No newline at end of file
+Index: src/ex_oct_24_selenium/test_Lab23_Selenium_Exception_handle.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab23_Selenium_Exception_handle.py b/src/ex_oct_24_selenium/test_Lab23_Selenium_Exception_handle.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab23_Selenium_Exception_handle.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,21 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.common import NoSuchElementException
+-from selenium.webdriver.common.by import By
+-
+-@allure.title("Exceptions handling")
+-@allure.description("Verify Exceptions handles")
+-def test_exception_handle_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://app.vwo.com/")
+-
+-   #handling exception
+-   try:
+-       web_element = driver.find_element(By.ID, "this ID doesn't exist")
+-
+-   # NoSuchElementException
+-   except NoSuchElementException as nse:
+-       print(nse.msg)
+-
+-   time.sleep(5)
+\ No newline at end of file
+Index: allure_result/82a124b4-6b0a-465b-bf3f-ea9497b45a7f-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/82a124b4-6b0a-465b-bf3f-ea9497b45a7f-result.json b/allure_result/82a124b4-6b0a-465b-bf3f-ea9497b45a7f-result.json
+deleted file mode 100644
+--- a/allure_result/82a124b4-6b0a-465b-bf3f-ea9497b45a7f-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "Verify the Title of the web page app.vwo.com", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom chrome not reachable\nStacktrace:\n\tGetHandleVerifier [0x00007FF7C637E1F5+2972373]\n\t(No symbol) [0x00007FF7C60155F0]\n\t(No symbol) [0x00007FF7C5EB5629]\n\t(No symbol) [0x00007FF7C5EA726D]\n\t(No symbol) [0x00007FF7C5EF3262]\n\t(No symbol) [0x00007FF7C5EED86B]\n\t(No symbol) [0x00007FF7C5EE8D6E]\n\t(No symbol) [0x00007FF7C5F36CA1]\n\t(No symbol) [0x00007FF7C5F36320]\n\t(No symbol) [0x00007FF7C5F2B823]\n\t(No symbol) [0x00007FF7C5EF75E8]\n\t(No symbol) [0x00007FF7C5EF8751]\n\tGetHandleVerifier [0x00007FF7C63A47BD+3129501]\n\tGetHandleVerifier [0x00007FF7C63F4D00+3458528]\n\tGetHandleVerifier [0x00007FF7C63EB05D+3418429]\n\tGetHandleVerifier [0x00007FF7C617687B+844123]\n\t(No symbol) [0x00007FF7C6020AFF]\n\t(No symbol) [0x00007FF7C601C6D4]\n\t(No symbol) [0x00007FF7C601C86D]\n\t(No symbol) [0x00007FF7C600BD79]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "@allure.title(\"Verify the Title of the web page app.vwo.com\")\n    def test_sample():\n>       driver=webdriver.Chrome()\n\nsrc\\ex_oct_16\\test_Lab001.py:7: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py:45: in __init__\n    super().__init__(\n.venv\\lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py:66: in __init__\n    super().__init__(command_executor=executor, options=options)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:212: in __init__\n    self.start_session(capabilities)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:299: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000015C0002AB30>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created\\\\nfrom chrome not rea...07FF7C600BD79]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nE       from chrome not reachable\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF7C637E1F5+2972373]\nE       \t(No symbol) [0x00007FF7C60155F0]\nE       \t(No symbol) [0x00007FF7C5EB5629]\nE       \t(No symbol) [0x00007FF7C5EA726D]\nE       \t(No symbol) [0x00007FF7C5EF3262]\nE       \t(No symbol) [0x00007FF7C5EED86B]\nE       \t(No symbol) [0x00007FF7C5EE8D6E]\nE       \t(No symbol) [0x00007FF7C5F36CA1]\nE       \t(No symbol) [0x00007FF7C5F36320]\nE       \t(No symbol) [0x00007FF7C5F2B823]\nE       \t(No symbol) [0x00007FF7C5EF75E8]\nE       \t(No symbol) [0x00007FF7C5EF8751]\nE       \tGetHandleVerifier [0x00007FF7C63A47BD+3129501]\nE       \tGetHandleVerifier [0x00007FF7C63F4D00+3458528]\nE       \tGetHandleVerifier [0x00007FF7C63EB05D+3418429]\nE       \tGetHandleVerifier [0x00007FF7C617687B+844123]\nE       \t(No symbol) [0x00007FF7C6020AFF]\nE       \t(No symbol) [0x00007FF7C601C6D4]\nE       \t(No symbol) [0x00007FF7C601C86D]\nE       \t(No symbol) [0x00007FF7C600BD79]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: SessionNotCreatedException"}, "start": 1729091069180, "stop": 1729091472195, "uuid": "10d991f0-76c3-4076-99cf-2d7e752966bb", "historyId": "04045c2792c46bdc87c1b3295bc19455", "testCaseId": "04045c2792c46bdc87c1b3295bc19455", "fullName": "src.ex_oct_16.test_Lab001#test_sample", "labels": [{"name": "parentSuite", "value": "src.ex_oct_16"}, {"name": "suite", "value": "test_Lab001"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "8516-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_16.test_Lab001"}]}
+\ No newline at end of file
+Index: allure_result/c772ae78-d431-41ac-882d-43cfa2e82b61-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/c772ae78-d431-41ac-882d-43cfa2e82b61-container.json b/allure_result/c772ae78-d431-41ac-882d-43cfa2e82b61-container.json
+deleted file mode 100644
+--- a/allure_result/c772ae78-d431-41ac-882d-43cfa2e82b61-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "815792c2-f814-4428-a8b9-e1f9ef8498fb", "children": ["78fb26fc-45e4-4cfb-8966-91b12612cc09"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729251836368, "stop": 1729251836900}], "start": 1729251836368, "stop": 1729252208257}
+\ No newline at end of file
+Index: allure_result/3817eefa-0c16-45d3-a6f4-87ed53298aab-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/3817eefa-0c16-45d3-a6f4-87ed53298aab-result.json b/allure_result/3817eefa-0c16-45d3-a6f4-87ed53298aab-result.json
+deleted file mode 100644
+--- a/allure_result/3817eefa-0c16-45d3-a6f4-87ed53298aab-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_chrome_options", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n\tGetHandleVerifier [0x00007FF7921BE1F5+2972373]\n\t(No symbol) [0x00007FF791E555F0]\n\t(No symbol) [0x00007FF791CF57FA]\n\t(No symbol) [0x00007FF791CE3BD7]\n\t(No symbol) [0x00007FF791CE38DA]\n\t(No symbol) [0x00007FF791CE151E]\n\t(No symbol) [0x00007FF791CE1FCF]\n\t(No symbol) [0x00007FF791CF08BE]\n\t(No symbol) [0x00007FF791D0383D]\n\t(No symbol) [0x00007FF791D091BA]\n\t(No symbol) [0x00007FF791CE2734]\n\t(No symbol) [0x00007FF791D03666]\n\t(No symbol) [0x00007FF791D8B7AE]\n\t(No symbol) [0x00007FF791D6B823]\n\t(No symbol) [0x00007FF791D375E8]\n\t(No symbol) [0x00007FF791D38751]\n\tGetHandleVerifier [0x00007FF7921E47BD+3129501]\n\tGetHandleVerifier [0x00007FF792234D00+3458528]\n\tGetHandleVerifier [0x00007FF79222B05D+3418429]\n\tGetHandleVerifier [0x00007FF791FB687B+844123]\n\t(No symbol) [0x00007FF791E60AFF]\n\t(No symbol) [0x00007FF791E5C6D4]\n\t(No symbol) [0x00007FF791E5C86D]\n\t(No symbol) [0x00007FF791E4BD79]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "def test_chrome_options():\n    \n        chrome_option=Options()\n        chrome_option.add_argument(\"--incognito\")   #chrome incognito mode\n        driver=webdriver.Chrome(chrome_option)\n>       driver.get(\"https://katalon-demo-cura.herokuapp.com/\")\n\nsrc\\ex_oct_17\\test_Lab05.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:363: in get\n    self.execute(Command.GET, {\"url\": url})\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000024A86B45A50>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"timeout\",\"message\":\"timeout: Timed out receiving message from renderer: 3...07FF791E4BD79]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000\nE         (Session info: chrome=130.0.6723.58)\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF7921BE1F5+2972373]\nE       \t(No symbol) [0x00007FF791E555F0]\nE       \t(No symbol) [0x00007FF791CF57FA]\nE       \t(No symbol) [0x00007FF791CE3BD7]\nE       \t(No symbol) [0x00007FF791CE38DA]\nE       \t(No symbol) [0x00007FF791CE151E]\nE       \t(No symbol) [0x00007FF791CE1FCF]\nE       \t(No symbol) [0x00007FF791CF08BE]\nE       \t(No symbol) [0x00007FF791D0383D]\nE       \t(No symbol) [0x00007FF791D091BA]\nE       \t(No symbol) [0x00007FF791CE2734]\nE       \t(No symbol) [0x00007FF791D03666]\nE       \t(No symbol) [0x00007FF791D8B7AE]\nE       \t(No symbol) [0x00007FF791D6B823]\nE       \t(No symbol) [0x00007FF791D375E8]\nE       \t(No symbol) [0x00007FF791D38751]\nE       \tGetHandleVerifier [0x00007FF7921E47BD+3129501]\nE       \tGetHandleVerifier [0x00007FF792234D00+3458528]\nE       \tGetHandleVerifier [0x00007FF79222B05D+3418429]\nE       \tGetHandleVerifier [0x00007FF791FB687B+844123]\nE       \t(No symbol) [0x00007FF791E60AFF]\nE       \t(No symbol) [0x00007FF791E5C6D4]\nE       \t(No symbol) [0x00007FF791E5C86D]\nE       \t(No symbol) [0x00007FF791E4BD79]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: TimeoutException"}, "start": 1729248275229, "stop": 1729248709003, "uuid": "92cb2685-f4bd-4f39-8aab-5dcf4126b963", "historyId": "2a731f5a559acece418be74d61e12cec", "testCaseId": "2a731f5a559acece418be74d61e12cec", "fullName": "src.ex_oct_17.test_Lab05#test_chrome_options", "labels": [{"name": "parentSuite", "value": "src.ex_oct_17"}, {"name": "suite", "value": "test_Lab05"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "16664-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_17.test_Lab05"}]}
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" filepath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: allure_result/5e0c4b41-c956-457f-be72-adf3fa44a22e-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/5e0c4b41-c956-457f-be72-adf3fa44a22e-container.json b/allure_result/5e0c4b41-c956-457f-be72-adf3fa44a22e-container.json
+deleted file mode 100644
+--- a/allure_result/5e0c4b41-c956-457f-be72-adf3fa44a22e-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "06e34d1a-b929-40b6-80d2-4df59833a264", "children": ["c3b467a4-686d-491a-80d7-2b12d62adc79"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729337215178, "stop": 1729337219037}], "start": 1729337215178, "stop": 1729337411269}
+\ No newline at end of file
+Index: src/ex_oct_24_selenium/test_Lab24_Selenium_StaleException.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab24_Selenium_StaleException.py b/src/ex_oct_24_selenium/test_Lab24_Selenium_StaleException.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab24_Selenium_StaleException.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,21 +0,0 @@
+-import time
+-import allure
+-import pytest
+-from selenium import webdriver
+-from selenium.common import NoSuchElementException
+-from selenium.webdriver.common.by import By
+-
+-@allure.title("Stale Exceptions")
+-@allure.description("Verify stale Exceptions")
+-def test_stale_exception_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://www.google.com/")
+-
+-   text_area = driver.find_element(By.NAME,"q")
+-
+-   driver.refresh()
+-   text_area.send_keys("The Testing Academy")
+-   #response = {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"stale element reference: stale elemen...07FF6B5DBEB79]\\n\\tBaseThreadInitThunk [0x00007FFD85907374+20]\\n\\tRtlUserThreadStart [0x00007FFD85D7CC91+33]\\n"}}'}
+-
+-
+-   time.sleep(5)
+\ No newline at end of file
+Index: allure_result/91c72451-3fb8-4701-a052-d004d0f08d61-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/91c72451-3fb8-4701-a052-d004d0f08d61-container.json b/allure_result/91c72451-3fb8-4701-a052-d004d0f08d61-container.json
+deleted file mode 100644
+--- a/allure_result/91c72451-3fb8-4701-a052-d004d0f08d61-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "7082bf66-17fc-4ba4-abac-ecf7c81f9750", "children": ["0a41c305-b543-499b-9e74-430145cb8204"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729244980613, "stop": 1729244984797}], "start": 1729244980613, "stop": 1729245485685}
+\ No newline at end of file
+Index: src/ex_oct_20_Locators/test_Lab09.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_20_Locators/test_Lab09.py b/src/ex_oct_20_Locators/test_Lab09.py
+deleted file mode 100644
+--- a/src/ex_oct_20_Locators/test_Lab09.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,24 +0,0 @@
+-from selenium import webdriver
+-import time
+-from selenium.webdriver.common.by import By
+-import pytest
+-import allure
+-
+-@pytest.mark.positive
+-@allure.title("Positive Testcase - app.vwo.com start a free trail link verification")
+-@allure.description("Verify that Free Trail Button clicked, navigate to next page")
+-def test_positive_vwo_free_trial_project3():
+-    driver=webdriver.Chrome()
+-    driver.get("https://app.vwo.com/#/login")
+-    #find start a free trial element
+-    #<a href="https://vwo.com/free-trial/?utm_medium=website&amp;utm_source=login-page&amp;utm_campaign=mof_eg_loginpage" class="text-link" data-qa="bericafeqo">Start a free trial</a>
+-    #LINK_TEXT = EXACT MATCH
+-
+-    anchor_tag_element_link=driver.find_element(By.LINK_TEXT,"Start a free trial")
+-    anchor_tag_element_link.click()
+-
+-    assert driver.current_url == "https://vwo.com/free-trial/?utm_medium=website&utm_source=login-page&utm_campaign=mof_eg_loginpage"
+-
+-    driver.back()   #go back to login page
+-    time.sleep(5)
+-    driver.quit()
+\ No newline at end of file
+Index: requirements.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-16LE
+===================================================================
+diff --git a/requirements.txt b/requirements.txt
+deleted file mode 100644
+--- a/requirements.txt	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,36 +0,0 @@
+-allure-pytest==2.13.5
+-allure-python-commons==2.13.5
+-attrs==24.2.0
+-certifi==2024.8.30
+-cffi==1.17.1
+-colorama==0.4.6
+-exceptiongroup==1.2.2
+-execnet==2.1.1
+-Faker==30.4.0
+-h11==0.14.0
+-idna==3.10
+-iniconfig==2.0.0
+-numpy==2.1.2
+-outcome==1.3.0.post0
+-packaging==24.1
+-pandas==2.2.3
+-pluggy==1.5.0
+-pycparser==2.22
+-PySocks==1.7.1
+-pytest==8.3.3
+-pytest-xdist==3.6.1
+-python-dateutil==2.9.0.post0
+-python-dotenv==1.0.1
+-pytz==2024.2
+-selenium==4.25.0
+-six==1.16.0
+-sniffio==1.3.1
+-sortedcontainers==2.4.0
+-tomli==2.0.2
+-trio==0.26.2
+-trio-websocket==0.11.1
+-typing_extensions==4.12.2
+-tzdata==2024.2
+-urllib3==2.2.3
+-websocket-client==1.8.0
+-wsproto==1.2.0
+Index: src/ex_oct_24_selenium/test_Lab20_svg.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab20_svg.py b/src/ex_oct_24_selenium/test_Lab20_svg.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab20_svg.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,23 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-
+-
+-@allure.title("SVG")
+-@allure.description("Verify SVG")
+-def test_svg_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://www.flipkart.com/")
+-
+-   #<input class="Pke_EE" type="text" title="Search for Products, Brands and More" name="q" autocomplete="off" placeholder="Search for Products, Brands and More" value="">
+-   search_box = driver.find_element(By.NAME, "q")
+-   search_box.send_keys("macmini")
+-
+-
+-   #//*[local-name()="svg"] or //*[name()="svg"]
+-   list_of_svg_elements = driver.find_elements(By.XPATH, "//*[name()='svg']")
+-   list_of_svg_elements[0].click()
+-
+-   time.sleep(5)
+-
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: allure_result/33abd4a0-4f6a-454a-950f-d2788e371336-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/33abd4a0-4f6a-454a-950f-d2788e371336-container.json b/allure_result/33abd4a0-4f6a-454a-950f-d2788e371336-container.json
+deleted file mode 100644
+--- a/allure_result/33abd4a0-4f6a-454a-950f-d2788e371336-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "6f4c54fb-a85d-4e5e-87b8-f54867f89751", "children": ["e5415bd3-6083-4774-94e0-12ed328b063f"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729337006707, "stop": 1729337007082}], "start": 1729337006707, "stop": 1729337110937}
+\ No newline at end of file
+Index: src/ex_oct_17_webdriver/test_Lab05.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/test_Lab05.py b/src/ex_oct_17_webdriver/test_Lab05.py
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/test_Lab05.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,16 +0,0 @@
+-from selenium import webdriver
+-from selenium.webdriver.chrome.options import Options
+-import time
+-
+-def test_chrome_options():
+-
+-    chrome_option=Options()
+-    chrome_option.add_argument("--incognito")   #chrome incognito mode
+-    #chrome_option.add_argument("--start-maximized")  #for maximizing session window
+-    #chrome_option.add_argument("--window-size")  #for making 900x600 windows size
+-    #chrome_option.add_argument("--headless") #no UI will be shown
+-    driver=webdriver.Chrome(chrome_option)
+-    driver.get("https://katalon-demo-cura.herokuapp.com/")
+-
+-    #stop the python interpreter for 10 second
+-    time.sleep(10)
+Index: src/ex_oct_24_selenium/test_Lab21_svg.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab21_svg.py b/src/ex_oct_24_selenium/test_Lab21_svg.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab21_svg.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,23 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-
+-
+-@allure.title("SVG complex example")
+-@allure.description("Verify SVG")
+-def test_svg_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://www.amcharts.com/svg-maps/?map=india")
+-
+-   #//*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']
+-   list_of_states = driver.find_elements(By.XPATH, "//*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']")
+-
+-   for state in list_of_states:
+-      print(state.get_attribute("aria-label"))
+-      if "Tripura" in state.get_attribute("aria-label"):
+-         state.click()
+-         break
+-
+-   time.sleep(5)
+-
+Index: src/ex_oct_24_selenium/test_Lab26_handling_timeout_exception.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab26_handling_timeout_exception.py b/src/ex_oct_24_selenium/test_Lab26_handling_timeout_exception.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab26_handling_timeout_exception.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,25 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.common import NoSuchElementException, StaleElementReferenceException, TimeoutException
+-from selenium.webdriver.common.by import By
+-from selenium.webdriver.support.ui import WebDriverWait
+-from selenium.webdriver.support import expected_conditions as EC
+-
+-
+-
+-@allure.title("Handling Timeout Exceptions")
+-@allure.description("Verify timeout Exceptions handles")
+-def test_handle_timeout_exception_verification():
+-    driver = webdriver.Chrome()
+-    driver.get("https://www.google.com/")
+-
+-    try:
+-        #submit element, doesn't exist, it will wait max 10 sec then throw exception
+-        WebDriverWait(driver=driver, timeout=10).until(EC.element_to_be_clickable((By.ID, "submit")))
+-        print("End of the program")
+-    except TimeoutException as te:
+-        print(te.msg)
+-        print("Timeout Exception occured!, 10 sec passed")
+-    finally:
+-        driver.quit()
+Index: allure_result/f36d06f2-2e55-4c6d-a44f-5aa7c0473d49-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/f36d06f2-2e55-4c6d-a44f-5aa7c0473d49-container.json b/allure_result/f36d06f2-2e55-4c6d-a44f-5aa7c0473d49-container.json
+deleted file mode 100644
+--- a/allure_result/f36d06f2-2e55-4c6d-a44f-5aa7c0473d49-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "633d98bf-fed2-4870-a3b9-69d7a1744b94", "children": ["61a1b93a-7e41-44da-8f98-e0526fff6719"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729337215209, "stop": 1729337219037}], "start": 1729337215209, "stop": 1729337326546}
+\ No newline at end of file
+Index: src/ex_oct26_Actions/test_task_3_oct_26.py
+===================================================================
+diff --git a/src/ex_oct26_Actions/test_task_3_oct_26.py b/src/ex_oct26_Actions/test_task_3_oct_26.py
+deleted file mode 100644
+--- a/src/ex_oct26_Actions/test_task_3_oct_26.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,21 +0,0 @@
+-import time
+-from selenium import webdriver
+-import allure
+-import pytest
+-from selenium.webdriver import ActionChains
+-from selenium.webdriver.common.by import By
+-
+-
+-@allure.title("Actions click and hold")
+-@allure.description("Verify click and hold actions")
+-
+-def test_verify_spicejet_actions():
+-    driver=webdriver.Chrome()
+-    driver.get("https://www.spicejet.com/")
+-    driver.maximize_window()
+-
+-    from_city=driver.find_element(By.XPATH,"//div[@class='css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep']")
+-    time.sleep(5)
+-    actions=ActionChains(driver)
+-    actions.move_to_element(from_city).click().send_keys("DEL").perform()
+-    time.sleep(10)
+\ No newline at end of file
+Index: allure_result/a48257f9-5b16-46b5-a4e5-0e569bce5c79-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/a48257f9-5b16-46b5-a4e5-0e569bce5c79-result.json b/allure_result/a48257f9-5b16-46b5-a4e5-0e569bce5c79-result.json
+deleted file mode 100644
+--- a/allure_result/a48257f9-5b16-46b5-a4e5-0e569bce5c79-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_chrome_options", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000\n  (Session info: chrome=130.0.6723.58)\nStacktrace:\n\tGetHandleVerifier [0x00007FF73608E1F5+2972373]\n\t(No symbol) [0x00007FF735D255F0]\n\t(No symbol) [0x00007FF735BC57FA]\n\t(No symbol) [0x00007FF735BB3BD7]\n\t(No symbol) [0x00007FF735BB38DA]\n\t(No symbol) [0x00007FF735BB151E]\n\t(No symbol) [0x00007FF735BB1FCF]\n\t(No symbol) [0x00007FF735BC08BE]\n\t(No symbol) [0x00007FF735BD383D]\n\t(No symbol) [0x00007FF735BD91BA]\n\t(No symbol) [0x00007FF735BB2734]\n\t(No symbol) [0x00007FF735BD3666]\n\t(No symbol) [0x00007FF735C5B7AE]\n\t(No symbol) [0x00007FF735C3B823]\n\t(No symbol) [0x00007FF735C075E8]\n\t(No symbol) [0x00007FF735C08751]\n\tGetHandleVerifier [0x00007FF7360B47BD+3129501]\n\tGetHandleVerifier [0x00007FF736104D00+3458528]\n\tGetHandleVerifier [0x00007FF7360FB05D+3418429]\n\tGetHandleVerifier [0x00007FF735E8687B+844123]\n\t(No symbol) [0x00007FF735D30AFF]\n\t(No symbol) [0x00007FF735D2C6D4]\n\t(No symbol) [0x00007FF735D2C86D]\n\t(No symbol) [0x00007FF735D1BD79]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "def test_chrome_options():\n    \n        chrome_option=Options()\n        chrome_option.add_argument(\"--incognito\")   #chrome incognito mode\n        chrome_option.add_argument(\"\")\n>       driver=webdriver.Chrome(chrome_option)\n\nsrc\\ex_oct_17\\test_Lab05.py:10: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:363: in get\n    self.execute(Command.GET, {\"url\": url})\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002731C765A50>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"timeout\",\"message\":\"timeout: Timed out receiving message from renderer: 3...07FF735D1BD79]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000\nE         (Session info: chrome=130.0.6723.58)\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF73608E1F5+2972373]\nE       \t(No symbol) [0x00007FF735D255F0]\nE       \t(No symbol) [0x00007FF735BC57FA]\nE       \t(No symbol) [0x00007FF735BB3BD7]\nE       \t(No symbol) [0x00007FF735BB38DA]\nE       \t(No symbol) [0x00007FF735BB151E]\nE       \t(No symbol) [0x00007FF735BB1FCF]\nE       \t(No symbol) [0x00007FF735BC08BE]\nE       \t(No symbol) [0x00007FF735BD383D]\nE       \t(No symbol) [0x00007FF735BD91BA]\nE       \t(No symbol) [0x00007FF735BB2734]\nE       \t(No symbol) [0x00007FF735BD3666]\nE       \t(No symbol) [0x00007FF735C5B7AE]\nE       \t(No symbol) [0x00007FF735C3B823]\nE       \t(No symbol) [0x00007FF735C075E8]\nE       \t(No symbol) [0x00007FF735C08751]\nE       \tGetHandleVerifier [0x00007FF7360B47BD+3129501]\nE       \tGetHandleVerifier [0x00007FF736104D00+3458528]\nE       \tGetHandleVerifier [0x00007FF7360FB05D+3418429]\nE       \tGetHandleVerifier [0x00007FF735E8687B+844123]\nE       \t(No symbol) [0x00007FF735D30AFF]\nE       \t(No symbol) [0x00007FF735D2C6D4]\nE       \t(No symbol) [0x00007FF735D2C86D]\nE       \t(No symbol) [0x00007FF735D1BD79]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: TimeoutException"}, "start": 1729251836915, "stop": 1729252206696, "uuid": "78fb26fc-45e4-4cfb-8966-91b12612cc09", "historyId": "2a731f5a559acece418be74d61e12cec", "testCaseId": "2a731f5a559acece418be74d61e12cec", "fullName": "src.ex_oct_17.test_Lab05#test_chrome_options", "labels": [{"name": "parentSuite", "value": "src.ex_oct_17"}, {"name": "suite", "value": "test_Lab05"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "14712-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_17.test_Lab05"}]}
+\ No newline at end of file
+Index: src/ex_oct_24_selenium/test_task_oct24.py
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_task_oct24.py b/src/ex_oct_24_selenium/test_task_oct24.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_task_oct24.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,25 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-
+-@allure.title("practice buttons radio, checkbox")
+-@allure.description("Verify that able to click on buttons and checkbox")
+-def test_button_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://awesomeqa.com/practice.html")
+-
+-   firstname = driver.find_element(By.CSS_SELECTOR, "input[name='firstname']")
+-   firstname.send_keys("Spandashri")
+-
+-   lastname = driver.find_element(By.CSS_SELECTOR, "input[name='lastname']")
+-   lastname.send_keys("Gowda")
+-
+-   gender = driver.find_element(By.XPATH, "//input[@name='firstname']")
+-   gender.click()
+-
+-   profession = driver.find_element(By.XPATH, "//input[@id='profession-1']")
+-   profession.click()
+-
+-   time.sleep(10)
+-   driver.quit()
+Index: allure_result/b297cde9-9d20-496d-ab80-ea900ef81635-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/b297cde9-9d20-496d-ab80-ea900ef81635-container.json b/allure_result/b297cde9-9d20-496d-ab80-ea900ef81635-container.json
+deleted file mode 100644
+--- a/allure_result/b297cde9-9d20-496d-ab80-ea900ef81635-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "3102fc01-500d-4483-8ae0-68788f18850c", "children": ["6d31e068-c091-4a26-833c-e417053df97d"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729245951386, "stop": 1729245952801}], "start": 1729245951386, "stop": 1729246057452}
+\ No newline at end of file
+Index: src/ex_oct_16_selenium/test_Lab03.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_16_selenium/test_Lab03.py b/src/ex_oct_16_selenium/test_Lab03.py
+deleted file mode 100644
+--- a/src/ex_oct_16_selenium/test_Lab03.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,15 +0,0 @@
+-from selenium import webdriver
+-import allure
+-import pytest
+-
+-
+-@allure.title("verify the Title of app.vwo.com")
+-def test_open_vwo_login():
+-    driver=webdriver.Chrome()
+-    #POST request to create a new fresh copy of Chrome
+-    #Fresh - Chrome -Session ID
+-
+-    driver.get("https://app.vwo.com")
+-    #Code - HTTP request - Chromedriver(selenium manager) - chrome(session id)
+-    print(driver.title)  #GET request
+-    assert driver.title == "Login - VWO"
+\ No newline at end of file
+Index: src/ex_oct_24_selenium/test_Lab17.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab17.py b/src/ex_oct_24_selenium/test_Lab17.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab17.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,72 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.webdriver.common.by import By
+-from selenium.webdriver.support.ui import WebDriverWait
+-from selenium.webdriver.support import expected_conditions as EC
+-@allure.title("Alerts example")
+-@allure.description("Verify Alerts")
+-def test_alerts_js_alert_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://the-internet.herokuapp.com/javascript_alerts ")
+-   driver.maximize_window()
+-   #Click on the Alert button and check the Result - (Assertion of the result)
+-   #//button[@onclick = "jsAlert()"]
+-   #id="result"
+-
+-   element_prompt=driver.find_element(By.XPATH, "//button[@onclick='jsAlert()']")
+-   element_prompt.click()
+-
+-   WebDriverWait(driver=driver, timeout=5).until((EC.alert_is_present()))
+-
+-   alert=driver.switch_to.alert
+-   alert.accept()
+-
+-   result_text=driver.find_element(By.ID, "result").text
+-   assert result_text == "You successfully clicked an alert"
+-
+-   time.sleep(5)
+-
+-def test_alerts_confirm_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://the-internet.herokuapp.com/javascript_alerts ")
+-   driver.maximize_window()
+-   #Click on the Alert button and check the Result - (Assertion of the result)
+-   #//button[@onclick = "jsAlert()"]
+-   #id="result"
+-
+-   element_confirm=driver.find_element(By.XPATH, "//button[@onclick='jsConfirm()']")
+-   element_confirm.click()
+-
+-   WebDriverWait(driver=driver, timeout=5).until((EC.alert_is_present()))
+-
+-   alert=driver.switch_to.alert
+-   alert.dismiss()
+-
+-   result_text=driver.find_element(By.ID, "result").text
+-   assert result_text == "You clicked: Cancel"
+-
+-   time.sleep(5)
+-
+-def test_alerts_prompt_verification():
+-   driver = webdriver.Chrome()
+-   driver.get("https://the-internet.herokuapp.com/javascript_alerts ")
+-
+-   #Click on the Alert button and check the Result - (Assertion of the result)
+-   #//button[@onclick = "jsAlert()"]
+-   #id="result"
+-
+-   element_prompt=driver.find_element(By.XPATH, "//button[@onclick='jsPrompt()']")
+-   element_prompt.click()
+-
+-   WebDriverWait(driver=driver, timeout=5).until((EC.alert_is_present()))
+-
+-   alert=driver.switch_to.alert
+-   alert.send_keys("Spanda")
+-   alert.accept()
+-   #alert.dismiss()
+-
+-   result_text=driver.find_element(By.ID, "result").text
+-   assert result_text == "You clicked: Spanda"
+-
+-   time.sleep(5)
+\ No newline at end of file
+Index: src/ex_oct_24_selenium/test_Lab25_Selenium_handling_Stale_Exception.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_24_selenium/test_Lab25_Selenium_handling_Stale_Exception.py b/src/ex_oct_24_selenium/test_Lab25_Selenium_handling_Stale_Exception.py
+deleted file mode 100644
+--- a/src/ex_oct_24_selenium/test_Lab25_Selenium_handling_Stale_Exception.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,22 +0,0 @@
+-import time
+-import allure
+-from selenium import webdriver
+-from selenium.common import NoSuchElementException, StaleElementReferenceException
+-from selenium.webdriver.common.by import By
+-
+-
+-@allure.title("Handling Stale Exceptions")
+-@allure.description("Verify stale Exceptions handles")
+-def test_handle_stale_exception_verification():
+-    driver = webdriver.Chrome()
+-    driver.get("https://www.google.com/")
+-
+-    try:
+-        text_area = driver.find_element(By.NAME, "q")
+-        driver.refresh()
+-        text_area.send_keys("The Testing Academy")
+-    except StaleElementReferenceException as ser:
+-        print(ser.msg)
+-        print("stale element reference")
+-
+-    time.sleep(5)
+\ No newline at end of file
+Index: allure_result/1a9b025b-c8ea-46e7-a1b4-6450e63b8b87-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/1a9b025b-c8ea-46e7-a1b4-6450e63b8b87-container.json b/allure_result/1a9b025b-c8ea-46e7-a1b4-6450e63b8b87-container.json
+deleted file mode 100644
+--- a/allure_result/1a9b025b-c8ea-46e7-a1b4-6450e63b8b87-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "e22feb8b-3d11-4788-969f-2ab12cfe2667", "children": ["92cb2685-f4bd-4f39-8aab-5dcf4126b963"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729248266332, "stop": 1729248274769}], "start": 1729248266332, "stop": 1729248710381}
+\ No newline at end of file
+Index: allure_result/b91088c6-1338-4bbf-9220-0d88302fcd2a-container.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/b91088c6-1338-4bbf-9220-0d88302fcd2a-container.json b/allure_result/b91088c6-1338-4bbf-9220-0d88302fcd2a-container.json
+deleted file mode 100644
+--- a/allure_result/b91088c6-1338-4bbf-9220-0d88302fcd2a-container.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"uuid": "4c86218a-c94e-4692-af95-b2befa4d5196", "children": ["10d991f0-76c3-4076-99cf-2d7e752966bb"], "befores": [{"name": "_session_faker", "status": "passed", "start": 1729091067398, "stop": 1729091068601}], "start": 1729091067398, "stop": 1729091497163}
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: =/88147ec7-9021-47df-b658-2a564777dea2-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/=/88147ec7-9021-47df-b658-2a564777dea2-result.json b/=/88147ec7-9021-47df-b658-2a564777dea2-result.json
+deleted file mode 100644
+--- a/=/88147ec7-9021-47df-b658-2a564777dea2-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "Verify the current url of the web page google.com", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000\n  (Session info: MicrosoftEdge=129.0.2792.89)\nStacktrace:\n\tGetHandleVerifier [0x00007FF6924FCEF5+12997]\n\tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF69277BD24+1897988]\n\t(No symbol) [0x00007FF6922AF1CC]\n\t(No symbol) [0x00007FF69229ACD3]\n\t(No symbol) [0x00007FF69229AA5E]\n\t(No symbol) [0x00007FF692298D71]\n\t(No symbol) [0x00007FF6922992EF]\n\t(No symbol) [0x00007FF6922A57C1]\n\t(No symbol) [0x00007FF6922BB8D7]\n\t(No symbol) [0x00007FF6922C0A3A]\n\t(No symbol) [0x00007FF692299C3A]\n\t(No symbol) [0x00007FF6922999B6]\n\t(No symbol) [0x00007FF6922BB686]\n\t(No symbol) [0x00007FF6923327ED]\n\t(No symbol) [0x00007FF692317BB3]\n\t(No symbol) [0x00007FF6922EB5AC]\n\t(No symbol) [0x00007FF6922EAA8D]\n\t(No symbol) [0x00007FF6922EB171]\n\tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6926A9E04+1038052]\n\tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF69242095F+56655]\n\tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF692413103+1267]\n\tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6926A8B8D+1033325]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF692499761+327729]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF692495BE4+312500]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF692495D19+312809]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF69248C28C+273244]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "@allure.title(\"Verify the current url of the web page google.com\")\n    def test_sample():\n        driver=webdriver.Edge()\n>       driver.get(\"https://google.com\")\n\nsrc\\ex_oct_16\\test_Lb002.py:8: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:363: in get\n    self.execute(Command.GET, {\"url\": url})\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001EFB5FEEF50>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"timeout\",\"message\":\"timeout: Timed out receiving message from renderer: 3...48C28C+273244]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 300.000\nE         (Session info: MicrosoftEdge=129.0.2792.89)\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF6924FCEF5+12997]\nE       \tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF69277BD24+1897988]\nE       \t(No symbol) [0x00007FF6922AF1CC]\nE       \t(No symbol) [0x00007FF69229ACD3]\nE       \t(No symbol) [0x00007FF69229AA5E]\nE       \t(No symbol) [0x00007FF692298D71]\nE       \t(No symbol) [0x00007FF6922992EF]\nE       \t(No symbol) [0x00007FF6922A57C1]\nE       \t(No symbol) [0x00007FF6922BB8D7]\nE       \t(No symbol) [0x00007FF6922C0A3A]\nE       \t(No symbol) [0x00007FF692299C3A]\nE       \t(No symbol) [0x00007FF6922999B6]\nE       \t(No symbol) [0x00007FF6922BB686]\nE       \t(No symbol) [0x00007FF6923327ED]\nE       \t(No symbol) [0x00007FF692317BB3]\nE       \t(No symbol) [0x00007FF6922EB5AC]\nE       \t(No symbol) [0x00007FF6922EAA8D]\nE       \t(No symbol) [0x00007FF6922EB171]\nE       \tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6926A9E04+1038052]\nE       \tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF69242095F+56655]\nE       \tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF692413103+1267]\nE       \tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6926A8B8D+1033325]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF692499761+327729]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF692495BE4+312500]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF692495D19+312809]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF69248C28C+273244]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: TimeoutException"}, "start": 1729176368241, "stop": 1729176753795, "uuid": "4cc7197c-9687-40c9-a461-fba09c72095d", "historyId": "3a5877d18dbeb38b2e2d6b8c953fa841", "testCaseId": "3a5877d18dbeb38b2e2d6b8c953fa841", "fullName": "src.ex_oct_16.test_Lb002#test_sample", "labels": [{"name": "parentSuite", "value": "src.ex_oct_16"}, {"name": "suite", "value": "test_Lb002"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "10392-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_16.test_Lb002"}]}
+\ No newline at end of file
+Index: allure_result/ff59a1da-e039-4ffc-81ab-2b06ac136898-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/ff59a1da-e039-4ffc-81ab-2b06ac136898-result.json b/allure_result/ff59a1da-e039-4ffc-81ab-2b06ac136898-result.json
+deleted file mode 100644
+--- a/allure_result/ff59a1da-e039-4ffc-81ab-2b06ac136898-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_open_vwo_loin", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom chrome not reachable\nStacktrace:\n\tGetHandleVerifier [0x00007FF6A3B9E1F5+2972373]\n\t(No symbol) [0x00007FF6A38355F0]\n\t(No symbol) [0x00007FF6A36D5629]\n\t(No symbol) [0x00007FF6A36C726D]\n\t(No symbol) [0x00007FF6A3713262]\n\t(No symbol) [0x00007FF6A370D86B]\n\t(No symbol) [0x00007FF6A3708D6E]\n\t(No symbol) [0x00007FF6A3756CA1]\n\t(No symbol) [0x00007FF6A3756320]\n\t(No symbol) [0x00007FF6A374B823]\n\t(No symbol) [0x00007FF6A37175E8]\n\t(No symbol) [0x00007FF6A3718751]\n\tGetHandleVerifier [0x00007FF6A3BC47BD+3129501]\n\tGetHandleVerifier [0x00007FF6A3C14D00+3458528]\n\tGetHandleVerifier [0x00007FF6A3C0B05D+3418429]\n\tGetHandleVerifier [0x00007FF6A399687B+844123]\n\t(No symbol) [0x00007FF6A3840AFF]\n\t(No symbol) [0x00007FF6A383C6D4]\n\t(No symbol) [0x00007FF6A383C86D]\n\t(No symbol) [0x00007FF6A382BD79]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "def test_open_vwo_loin():\n>       driver=webdriver.Chrome()  #it will create the Session\n\nsrc\\ex_oct_17\\test_Lab04.py:4: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\chrome\\webdriver.py:45: in __init__\n    super().__init__(\n.venv\\lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py:66: in __init__\n    super().__init__(command_executor=executor, options=options)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:212: in __init__\n    self.start_session(capabilities)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:299: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001EA0978EC50>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created\\\\nfrom chrome not rea...07FF6A382BD79]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nE       from chrome not reachable\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF6A3B9E1F5+2972373]\nE       \t(No symbol) [0x00007FF6A38355F0]\nE       \t(No symbol) [0x00007FF6A36D5629]\nE       \t(No symbol) [0x00007FF6A36C726D]\nE       \t(No symbol) [0x00007FF6A3713262]\nE       \t(No symbol) [0x00007FF6A370D86B]\nE       \t(No symbol) [0x00007FF6A3708D6E]\nE       \t(No symbol) [0x00007FF6A3756CA1]\nE       \t(No symbol) [0x00007FF6A3756320]\nE       \t(No symbol) [0x00007FF6A374B823]\nE       \t(No symbol) [0x00007FF6A37175E8]\nE       \t(No symbol) [0x00007FF6A3718751]\nE       \tGetHandleVerifier [0x00007FF6A3BC47BD+3129501]\nE       \tGetHandleVerifier [0x00007FF6A3C14D00+3458528]\nE       \tGetHandleVerifier [0x00007FF6A3C0B05D+3418429]\nE       \tGetHandleVerifier [0x00007FF6A399687B+844123]\nE       \t(No symbol) [0x00007FF6A3840AFF]\nE       \t(No symbol) [0x00007FF6A383C6D4]\nE       \t(No symbol) [0x00007FF6A383C86D]\nE       \t(No symbol) [0x00007FF6A382BD79]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: SessionNotCreatedException"}, "start": 1729245952989, "stop": 1729246049417, "uuid": "6d31e068-c091-4a26-833c-e417053df97d", "historyId": "4232acc71eafb6a7915ccb0eb524bd27", "testCaseId": "4232acc71eafb6a7915ccb0eb524bd27", "fullName": "src.ex_oct_17.test_Lab04#test_open_vwo_loin", "labels": [{"name": "parentSuite", "value": "src.ex_oct_17"}, {"name": "suite", "value": "test_Lab04"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "5240-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_17.test_Lab04"}]}
+\ No newline at end of file
+Index: src/ex_oct_17_webdriver/Task_HTML_form_creation.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/Task_HTML_form_creation.html b/src/ex_oct_17_webdriver/Task_HTML_form_creation.html
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/Task_HTML_form_creation.html	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,86 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>AwesomeQA Form</title>
+-</head>
+-<body>
+-
+-    <form>
+-        <label for="firstname">First name:</label>
+-        <input type="text" id="firstname" name="firstname"><br><br>
+-
+-        <label for="lastname">Last name:</label>
+-        <input type="text" id="lastname" name="lastname"><br><br>
+-
+-        <label for="gender">Gender:</label><br>
+-        <input type="radio" id="male" name="gender" value="male">
+-        <label for="male">Male</label>
+-        <input type="radio" id="female" name="gender" value="female">
+-        <label for="female">Female</label><br><br>
+-
+-        <label for="experience">Years of Experience</label><br>
+-        <input type="radio" id="exp1" name="experience" value="1"> 1
+-        <input type="radio" id="exp2" name="experience" value="2"> 2
+-        <input type="radio" id="exp3" name="experience" value="3"> 3
+-        <input type="radio" id="exp4" name="experience" value="4"> 4
+-        <input type="radio" id="exp5" name="experience" value="5"> 5
+-        <input type="radio" id="exp6" name="experience" value="6"> 6
+-        <input type="radio" id="exp7" name="experience" value="7"> 7<br><br>
+-
+-        <label for="date">Date:</label>
+-        <input type="date" id="date" name="date"><br><br>
+-
+-
+-        <label for="profession">Profession</label><br>
+-        <input type="checkbox" id="manual" name="profession" value="manual">
+-        <label for="manual">Manual Tester</label><br>
+-        <input type="checkbox" id="automation" name="profession" value="automation">
+-        <label for="automation">Automation Tester</label><br><br>
+-
+-
+-        <label for="tools">Automation Tools</label><br>
+-        <input type="checkbox" id="uft" name="tools" value="uft">
+-        <label for="uft">UFT</label><br>
+-        <input type="checkbox" id="protractor" name="tools" value="protractor">
+-        <label for="protractor">Protractor</label><br>
+-        <input type="checkbox" id="selenium" name="tools" value="selenium">
+-        <label for="selenium">Selenium Webdriver</label><br><br>
+-
+-
+-        <label for="continents">Continents</label><br>
+-        <select id="continents" name="continents">
+-            <option value="asia">Asia</option>
+-            <option value="europe">Europe</option>
+-            <option value="austrelia">Austrelia</option>
+-            <option value="africa">Africa</option>
+-            <option value="south america">South America</option>
+-            <option value="north america">North America</option>
+-            <option value="antartica">Antartica</option>
+-        </select><br><br>
+-
+-
+-        <label for="commands">Selenium Commands</label><br>
+-        <select id="commands" name="commands" multiple>
+-            <option value="browser">Browser Commands</option>
+-            <option value="navigation">Navigation Commands</option>
+-            <option value="navigation">Switch Commands</option>
+-            <option value="navigation">Wait Commands</option>
+-            <option value="navigation">WebElement Commands</option>
+-        </select><br><br>
+-
+-
+-        <label for="image">Upload Image</label>
+-        <input type="file" id="image" name="image"><br><br>
+-
+-
+-        <label for="download">Download File</label>
+-        <a href="#">Click here to Download File</a><br><br>
+-
+-
+-        <button type="submit">Button</button>
+-    </form>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: src/ex_oct_17_webdriver/test_Lab06.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_17_webdriver/test_Lab06.py b/src/ex_oct_17_webdriver/test_Lab06.py
+deleted file mode 100644
+--- a/src/ex_oct_17_webdriver/test_Lab06.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,9 +0,0 @@
+-from selenium import webdriver
+-
+-def test_current_url_verification():
+-    driver=webdriver.Chrome()  #using chrome browser
+-    #driver=webdriver.Edge() #using MS Edge
+-    #driver=webdriver.Firefox() #using Firefox browser
+-    driver.get("https://katalon-demo-cura.herokuapp.com/")
+-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/"
+-    driver.quit()
+\ No newline at end of file
+Index: allure_result/3df2b12b-8d3e-4f47-99ee-a004b4b3c428-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/3df2b12b-8d3e-4f47-99ee-a004b4b3c428-result.json b/allure_result/3df2b12b-8d3e-4f47-99ee-a004b4b3c428-result.json
+deleted file mode 100644
+--- a/allure_result/3df2b12b-8d3e-4f47-99ee-a004b4b3c428-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_firefox_current_url_verification_chrome", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.TimeoutException: Message: unknown error", "trace": "def test_firefox_current_url_verification_chrome():\n>       driver=webdriver.Firefox()\n\nsrc\\ex_oct_17\\test_Lab07.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\firefox\\webdriver.py:71: in __init__\n    super().__init__(command_executor=executor, options=options)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:212: in __init__\n    self.start_session(capabilities)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:299: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000020D280BD9C0>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"timeout\",\"message\":\"unknown error\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: unknown error\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: TimeoutException"}, "start": 1729337219084, "stop": 1729337410863, "uuid": "c3b467a4-686d-491a-80d7-2b12d62adc79", "historyId": "a57a857005cdbf0550329f07f3f98961", "testCaseId": "a57a857005cdbf0550329f07f3f98961", "fullName": "src.ex_oct_17.test_Lab07#test_firefox_current_url_verification_chrome", "labels": [{"name": "parentSuite", "value": "src.ex_oct_17"}, {"name": "suite", "value": "test_Lab07"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "14236-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_17.test_Lab07"}]}
+\ No newline at end of file
+Index: src/ex_oct_16_selenium/test_Lb02.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_16_selenium/test_Lb02.py b/src/ex_oct_16_selenium/test_Lb02.py
+deleted file mode 100644
+--- a/src/ex_oct_16_selenium/test_Lb02.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,9 +0,0 @@
+-from selenium import webdriver
+-import pytest
+-import allure
+-
+-@allure.title("Verify the current url of the web page google.com")
+-def test_sample():
+-    driver=webdriver.Edge()
+-    driver.get("https://google.com")
+-    assert driver.current_url == "https://www.google.com/"
+\ No newline at end of file
+Index: src/ex_oct_20_Locators/test_Lab12.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_oct_20_Locators/test_Lab12.py b/src/ex_oct_20_Locators/test_Lab12.py
+deleted file mode 100644
+--- a/src/ex_oct_20_Locators/test_Lab12.py	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,16 +0,0 @@
+-from selenium import webdriver
+-import allure
+-import pytest
+-import time
+-from selenium.webdriver.common.by import By
+-
+-@pytest.mark.positive
+-@allure.title("Xpath example")
+-@allure.description("Verify that using XPath able to find en send keys to input")
+-def test_xpath_example():
+-    driver=webdriver.Chrome()
+-    driver.get("https://app.vwo.com/#/login")
+-    web_element_username=driver.find_element(By.XPATH, "//input[@id='login-username']")
+-    web_element_username.send_keys("abc@gmail.com")
+-    time.sleep(5)
+-    driver.quit()
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/profiles_settings.xml	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,6 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <settings>
+-    <option name="USE_PROJECT_PROFILE" value="false" />
+-    <version value="1.0" />
+-  </settings>
+-</component>
+\ No newline at end of file
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+deleted file mode 100644
+--- a/README.md	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,3 +0,0 @@
+-Learning Selenium Programs
+-
+-
+Index: allure_result/6e826951-d99f-4894-9dce-9a4a6d9fb389-result.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/allure_result/6e826951-d99f-4894-9dce-9a4a6d9fb389-result.json b/allure_result/6e826951-d99f-4894-9dce-9a4a6d9fb389-result.json
+deleted file mode 100644
+--- a/allure_result/6e826951-d99f-4894-9dce-9a4a6d9fb389-result.json	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ /dev/null	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
+@@ -1,1 +0,0 @@
+-{"name": "test_edge_current_url_verification_chrome", "status": "broken", "statusDetails": {"message": "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom chrome not reachable\nStacktrace:\n\tGetHandleVerifier [0x00007FF6FA83CEF5+12997]\n\tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6FAABBD24+1897988]\n\t(No symbol) [0x00007FF6FA5EF005]\n\t(No symbol) [0x00007FF6FA5DDE04]\n\t(No symbol) [0x00007FF6FA62717C]\n\t(No symbol) [0x00007FF6FA623C11]\n\t(No symbol) [0x00007FF6FA61E0A8]\n\t(No symbol) [0x00007FF6FA6622BF]\n\t(No symbol) [0x00007FF6FA657BB3]\n\t(No symbol) [0x00007FF6FA62B5AC]\n\t(No symbol) [0x00007FF6FA62AA8D]\n\t(No symbol) [0x00007FF6FA62B171]\n\tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6FA9E9E04+1038052]\n\tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FA76095F+56655]\n\tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FA753103+1267]\n\tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6FA9E8B8D+1033325]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7D9761+327729]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7D5BE4+312500]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7D5D19+312809]\n\tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7CC28C+273244]\n\tBaseThreadInitThunk [0x00007FFC457F7374+20]\n\tRtlUserThreadStart [0x00007FFC4633CC91+33]", "trace": "def test_edge_current_url_verification_chrome():\n>       driver=webdriver.Edge()\n\nsrc\\ex_oct_17\\test_Lab07.py:14: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n.venv\\lib\\site-packages\\selenium\\webdriver\\edge\\webdriver.py:45: in __init__\n    super().__init__(\n.venv\\lib\\site-packages\\selenium\\webdriver\\chromium\\webdriver.py:66: in __init__\n    super().__init__(command_executor=executor, options=options)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:212: in __init__\n    self.start_session(capabilities)\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:299: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py:354: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000226A5909210>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created\\\\nfrom chrome not rea...7CC28C+273244]\\\\n\\\\tBaseThreadInitThunk [0x00007FFC457F7374+20]\\\\n\\\\tRtlUserThreadStart [0x00007FFC4633CC91+33]\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nE       from chrome not reachable\nE       Stacktrace:\nE       \tGetHandleVerifier [0x00007FF6FA83CEF5+12997]\nE       \tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6FAABBD24+1897988]\nE       \t(No symbol) [0x00007FF6FA5EF005]\nE       \t(No symbol) [0x00007FF6FA5DDE04]\nE       \t(No symbol) [0x00007FF6FA62717C]\nE       \t(No symbol) [0x00007FF6FA623C11]\nE       \t(No symbol) [0x00007FF6FA61E0A8]\nE       \t(No symbol) [0x00007FF6FA6622BF]\nE       \t(No symbol) [0x00007FF6FA657BB3]\nE       \t(No symbol) [0x00007FF6FA62B5AC]\nE       \t(No symbol) [0x00007FF6FA62AA8D]\nE       \t(No symbol) [0x00007FF6FA62B171]\nE       \tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6FA9E9E04+1038052]\nE       \tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FA76095F+56655]\nE       \tMicrosoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6FA753103+1267]\nE       \tMicrosoft::Applications::Events::EventProperty::empty [0x00007FF6FA9E8B8D+1033325]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7D9761+327729]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7D5BE4+312500]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7D5D19+312809]\nE       \tMicrosoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6FA7CC28C+273244]\nE       \tBaseThreadInitThunk [0x00007FFC457F7374+20]\nE       \tRtlUserThreadStart [0x00007FFC4633CC91+33]\n\n.venv\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py:229: SessionNotCreatedException"}, "start": 1729337219084, "stop": 1729337313056, "uuid": "90ebbeb3-786d-4a16-97eb-31dbc51eb553", "historyId": "7de9a191fb337ddf02d1db5cc89db5d5", "testCaseId": "7de9a191fb337ddf02d1db5cc89db5d5", "fullName": "src.ex_oct_17.test_Lab07#test_edge_current_url_verification_chrome", "labels": [{"name": "parentSuite", "value": "src.ex_oct_17"}, {"name": "suite", "value": "test_Lab07"}, {"name": "host", "value": "DESKTOP-N2JUPE0"}, {"name": "thread", "value": "12780-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "src.ex_oct_17.test_Lab07"}]}
+\ No newline at end of file
+Index: src/ex_nov5_webtable/test_Lab36_wetable.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_nov5_webtable/test_Lab36_wetable.py b/src/ex_nov5_webtable/test_Lab36_wetable.py
+new file mode 100644
+--- /dev/null	(date 1730913963150)
++++ b/src/ex_nov5_webtable/test_Lab36_wetable.py	(date 1730913963150)
+@@ -0,0 +1,40 @@
++import time
++
++from selenium import webdriver
++from selenium.webdriver.common.by import By
++
++def test_webtable():
++    driver = webdriver.Chrome()
++    driver.get("https://awesomeqa.com/webtable.html")
++
++    #row xpath --> //table[contains(@id, 'cust')]/tbody/tr
++    row_ele = driver.find_elements(By.XPATH, "//table[contains(@id,'cust')]/tbody/tr")
++    row = len(row_ele)
++    print(row)
++
++    #col xpath --> //table[contains(@id, 'cust')]/tbody/tr[2]td
++    col_ele = driver.find_elements(By.XPATH, "//table[contains(@id,'cust')]/tbody/tr[2]/td")
++    col = len(col_ele)
++    print(col)
++
++    #xpath - //table[contains(@id,'cust')]/tbody/tr[3]/td[2]
++    #first part - //table[contains(@id,'cust')]/tbody/tr[
++    #second part - ]/td[
++    #third part - ]
++    #row-(2,7) i
++    #col-(1,3) j
++
++    first_part = "//table[contains(@id,'cust')]/tbody/tr["
++    second_part = "]/td["
++    third_part = "]"
++
++    for i in range(2,row+1):
++        for j in range(1, col+1):
++            dynamic_path = f"{first_part}{i}{second_part}{j}{third_part}"
++            print(dynamic_path)
++            #we can find the element of dynamic path in text
++            data = driver.find_element(By.XPATH,dynamic_path)
++            print(data.text,end=" ")
++    time.sleep(5)
++    driver.quit()
++
+Index: src/ex_nov5_webtable/test_Lab37_webtable.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_nov5_webtable/test_Lab37_webtable.py b/src/ex_nov5_webtable/test_Lab37_webtable.py
+new file mode 100644
+--- /dev/null	(date 1730956196043)
++++ b/src/ex_nov5_webtable/test_Lab37_webtable.py	(date 1730956196043)
+@@ -0,0 +1,43 @@
++#From web table find “Helen Bennett” and which country she belongs to?
++import time
++from selenium import webdriver
++from selenium.webdriver.common.by import By
++
++def test_webtable_p2():
++    driver = webdriver.Chrome()
++    driver.get("https://awesomeqa.com/webtable.html")
++
++    #row xpath --> //table[contains(@id, 'cust')]/tbody/tr
++    row_ele = driver.find_elements(By.XPATH, "//table[contains(@id,'cust')]/tbody/tr")
++    row = len(row_ele)
++    print(row)
++
++    #col xpath --> //table[contains(@id, 'cust')]/tbody/tr[2]td
++    col_ele = driver.find_elements(By.XPATH, "//table[contains(@id,'cust')]/tbody/tr[2]/td")
++    col = len(col_ele)
++    print(col)
++
++    #xpath - //table[contains(@id,'cust')]/tbody/tr[3]/td[2]
++    #first part - //table[contains(@id,'cust')]/tbody/tr[
++    #second part - ]/td[
++    #third part - ]
++    #row-(2,7) i
++    #col-(1,3) j
++
++    first_part = "//table[contains(@id,'cust')]/tbody/tr["
++    second_part = "]/td["
++    third_part = "]"
++
++    for i in range(2,row+1):
++        for j in range(1, col+1):
++            dynamic_path = f"{first_part}{i}{second_part}{j}{third_part}"
++            data = driver.find_element(By.XPATH,dynamic_path).text
++            if "Helen Bennett" in data:
++                country_path = f"{dynamic_path}/following-sibling::td"
++                #to find which company she belongs to, we should use /preceding-sibling
++                #country_path = f"{dynamic_path}/precedingm    -sibling::td"
++                country_text = driver.find_element(By.XPATH,country_path).text
++                print(f"Hellen Bennett is belongs to {country_text}")
++    time.sleep(5)
++    driver.quit()
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"339bf49c-a6e4-41ca-834e-995f6e67a995\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/ex_oct26_Actions/test_task_3_oct_26.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/ex_oct_24_selenium/test_task_oct24.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/ex_oct26/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2nWHLWfA9TA84dvtjkCvtwsfNdD\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"Python tests.Python tests for test_Lab001.test_sample.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab003.test_open_vwo_login.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab04.test_open_vwo_loin.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab05.test_chrome_options.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab06.test_current_url_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab08.test_current_url_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab08.test_negative_vwo_login_project2.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab09.test_positive_vwo_free_trial_project3.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab10.test_positive_vwo_free_trial__partial_link_text_project3.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab11.test_tag_name_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab12.test_Xpath_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab12.test_xpath_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab13.test_item_and_price_listing_ebay.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab13.test_xpath_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab13_task_oct22.test_item_and_price_listing_ebay.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab14.test_implicit_wait_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab15.test_explicit_wait_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab15.test_negative_vwo_login_project2.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab15_explicit_wait.test_explicit_wait_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab16_explicit_fluent_wait.test_explicit_wait_example.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab16_explicit_fluent_wait.test_negative_vwo_login_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab17.test_alerts_js_confirm_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab17.test_alerts_prompt_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab17.test_alerts_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab18.test_alerts_confirm_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab22_Selenium_Exception.test_exception_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab23_Selenium_Exception_handle.test_exception_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab24_Selenium_StaleException.test_stale_exception_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_handle_stale_exception_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab25_Selenium_handling_Stale_Exception.test_stale_exception_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab26_handling_timeout_exception.test_handle_timeout_exception_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab32_Selenium_actions_windows_js.test_verify_action_windows_js.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab32_Selenium_actions_windows_js.test_verify_js.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lab34_selenium_JS_P2.test_verify_js_window_scroll.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_Lb002.test_sample.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_oct26_task_2.test_verify_drag.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_task_3_oct_26.test_verify_actions_spicejet.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_task_3_oct_26.test_verify_spicejet_actions.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_task_Selenium_script.test_verify_katalon_page.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_task_oct19.test_registration_page_automation.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_task_oct24.test_button_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests for test_task_oct_17.test_task_katalon_current_url_verification.executor\": \"Run\",\r\n    \"Python tests.Python tests in test_oct26_task#2.py.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"last_opened_file_path\": \"C:/Users/win10/PycharmProjects/pyATB4xLearningSeleniumProgram\",\r\n    \"settings.editor.selected.configurable\": \"com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Python tests.Python tests for test_task_3_oct_26.test_verify_spicejet_actions\">\r\n    <configuration name=\"Python tests for src.ex_oct26_Actions.test_oct26_task_2\" type=\"tests\" factoryName=\"Autodetect\" nameIsGenerated=\"true\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/ex_oct26_Actions\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;src.ex_oct26_Actions.test_oct26_task_2&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Python tests for test_oct26_task_2.test_verify_drag\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"SDK_NAME\" value=\"Python 3.12 (pyATB4xLearningSeleniumProgram)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/ex_oct26_Actions\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;test_oct26_task_2.test_verify_drag&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Python tests for test_task_3_oct_26.test_verify_actions_spicejet\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"SDK_NAME\" value=\"Python 3.12 (pyATB4xLearningSeleniumProgram)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/ex_oct26_Actions\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;test_task_3_oct_26.test_verify_actions_spicejet&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Python tests for test_task_3_oct_26.test_verify_spicejet_actions\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"SDK_NAME\" value=\"Python 3.12 (pyATB4xLearningSeleniumProgram)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/ex_oct26_Actions\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;test_task_3_oct_26.test_verify_spicejet_actions&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Python tests for test_task_oct24.test_button_verification\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/ex_oct_24_selenium\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;test_task_oct24.test_button_verification&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PYTHON&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Python tests in test_oct26_task_2.py\" type=\"tests\" factoryName=\"Autodetect\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/ex_oct26_Actions\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"tests\" factoryName=\"Autodetect\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"SDK_NAME\" value=\"Python 3.12 (pyATB4xLearningSeleniumProgram)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"tests\" factoryName=\"py.test\">\r\n      <module name=\"pyATB4xLearningSeleniumProgram\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"SDK_NAME\" value=\"Python 3.12 (pyATB4xLearningSeleniumProgram)\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"_new_keywords\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_parameters\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python tests.Python tests for test_task_3_oct_26.test_verify_spicejet_actions\" />\r\n        <item itemvalue=\"Python tests.Python tests for test_task_3_oct_26.test_verify_actions_spicejet\" />\r\n        <item itemvalue=\"Python tests.Python tests for test_oct26_task_2.test_verify_drag\" />\r\n        <item itemvalue=\"Python tests.Python tests for test_task_oct24.test_button_verification\" />\r\n        <item itemvalue=\"Python tests.Python tests in test_oct26_task_2.py\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-abccbe9d933a-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.428\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"339bf49c-a6e4-41ca-834e-995f6e67a995\" name=\"Changes\" comment=\"\" />\r\n      <created>1729081859505</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729081859505</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/src/ex_oct_17/test_Lab07.py</url>\r\n          <line>4</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/src/ex_oct_17/test_task_oct_17.py</url>\r\n          <line>4</line>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py</url>\r\n          <option name=\"timeStamp\" value=\"5\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab15_explicit_wait.py</url>\r\n          <line>10</line>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab17.py</url>\r\n          <line>8</line>\r\n          <option name=\"timeStamp\" value=\"8\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py</url>\r\n          <line>9</line>\r\n          <option name=\"timeStamp\" value=\"9\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ b/.idea/workspace.xml	(date 1730961136624)
+@@ -5,15 +5,79 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="339bf49c-a6e4-41ca-834e-995f6e67a995" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/ex_oct26_Actions/test_task_3_oct_26.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_task_oct24.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ex_oct26/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/=/5d174353-d168-448f-b347-21f1f1aa42e9-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/=/88147ec7-9021-47df-b658-2a564777dea2-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/=/b27c0650-42a3-4bb4-b966-539e4119405b-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/=/f192781a-7783-42ed-9322-8bd8fb278a47-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Katolon_Selenium_IDE.side" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/1a9b025b-c8ea-46e7-a1b4-6450e63b8b87-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/262cda14-e417-41a4-96b9-84e90a96c127-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/33abd4a0-4f6a-454a-950f-d2788e371336-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/376d4179-b15e-4a32-90f5-fbf4f0df05da-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/test_Lab36_wetable.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/3817eefa-0c16-45d3-a6f4-87ed53298aab-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/3df2b12b-8d3e-4f47-99ee-a004b4b3c428-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/3f49d02d-0bc5-4f85-8060-0e496296bc70-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/439d36a8-56b0-40cd-aee6-5824acd758e0-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/test_Lab37_webtable.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/452e8322-a11a-44c0-851d-a3451ad67b95-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/test_Lab38_dynamic_webtable.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/5e0c4b41-c956-457f-be72-adf3fa44a22e-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/6e826951-d99f-4894-9dce-9a4a6d9fb389-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/82a124b4-6b0a-465b-bf3f-ea9497b45a7f-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/844ea466-ffc9-460f-93f6-05c1b5856d93-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/91c72451-3fb8-4701-a052-d004d0f08d61-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/96032b68-7686-4c9a-8403-517788e950b3-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/9dbaf7c1-f712-4c58-a780-161dc9d1f46f-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/a48257f9-5b16-46b5-a4e5-0e569bce5c79-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/b297cde9-9d20-496d-ab80-ea900ef81635-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/b91088c6-1338-4bbf-9220-0d88302fcd2a-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/c772ae78-d431-41ac-882d-43cfa2e82b61-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/f36d06f2-2e55-4c6d-a44f-5aa7c0473d49-container.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/allure_result/ff59a1da-e039-4ffc-81ab-2b06ac136898-result.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct26_Actions/test_task_3_oct_26.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_Lab01.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_Lab03.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_Lb02.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_task_Selenium_script.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/Task_HTML_form_creation.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab04.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab05.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab06.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab07.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab08.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_task_oct_17.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab08.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab09.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab10.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab11.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab12.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab14.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab15_explicit_wait.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab16_explicit_fluent_wait.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/__init__.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab17.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab18.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab19_select.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab20_svg.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab21_svg.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab22_Selenium_Exception.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab23_Selenium_Exception_handle.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab24_Selenium_StaleException.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab25_Selenium_handling_Stale_Exception.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab26_handling_timeout_exception.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_task_oct24.py" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -89,7 +153,7 @@
+     "Python tests.Python tests for test_task_oct_17.test_task_katalon_current_url_verification.executor": "Run",
+     "Python tests.Python tests in test_oct26_task#2.py.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "master",
++    "git-widget-placeholder": "Reverting in master",
+     "last_opened_file_path": "C:/Users/win10/PycharmProjects/pyATB4xLearningSeleniumProgram",
+     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+   }
+@@ -262,10 +326,6 @@
+           <url>file://$PROJECT_DIR$/src/ex_oct_17/test_task_oct_17.py</url>
+           <line>4</line>
+           <option name="timeStamp" value="4" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py</url>
+-          <option name="timeStamp" value="5" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+           <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab15_explicit_wait.py</url>
+@@ -276,11 +336,6 @@
+           <url>file://$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab17.py</url>
+           <line>8</line>
+           <option name="timeStamp" value="8" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py</url>
+-          <line>9</line>
+-          <option name="timeStamp" value="9" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: src/ex_nov5_webtable/test_Lab38_dynamic_webtable.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ex_nov5_webtable/test_Lab38_dynamic_webtable.py b/src/ex_nov5_webtable/test_Lab38_dynamic_webtable.py
+new file mode 100644
+--- /dev/null	(date 1730957250582)
++++ b/src/ex_nov5_webtable/test_Lab38_dynamic_webtable.py	(date 1730957250582)
+@@ -0,0 +1,21 @@
++#find all the elements of dynamic table
++import time
++from selenium import webdriver
++from selenium.webdriver.common.by import By
++
++def test_webtable_dynamic():
++    driver = webdriver.Chrome()
++    driver.get("https://awesomeqa.com/webtable1.html")
++
++    #get the table
++    table = driver.find_element(By.XPATH, "//table[@summary='Sample Table']/tbody")
++    row_table = table.find_elements(By.TAG_NAME, "tr")  #//table[@summary='Sample Table']/tbody/tr[4]/td
++
++    for row in row_table:
++        cols = row.find_elements(By.TAG_NAME, "td")
++        for e in cols:
++            print(e.text)
++
++    time.sleep(5)
++    driver.quit()
++
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.10 (pyATB4xLearningSeleniumProgram)\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (pyATB4xLearningSeleniumProgram)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision f2c01643d7a96ab36907d31fe892cadb4e5d4ff4)
++++ b/.idea/misc.xml	(date 1730961021413)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.10 (pyATB4xLearningSeleniumProgram)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (pyATB4xLearningSeleniumProgram)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (pyATB4xLearningSeleniumProgram)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+diff --git a/allure_result/452e8322-a11a-44c0-851d-a3451ad67b95-result.json b/allure_result/452e8322-a11a-44c0-851d-a3451ad67b95-result.json
+deleted file mode 100644
+diff --git a/src/ex_oct_17_webdriver/__init__.py b/src/ex_oct_17_webdriver/__init__.py
+deleted file mode 100644
+diff --git a/src/ex_oct_20_Locators/__init__.py b/src/ex_oct_20_Locators/__init__.py
+deleted file mode 100644
+diff --git a/src/ex_oct_24_selenium/test_Lab18.py b/src/ex_oct_24_selenium/test_Lab18.py
+deleted file mode 100644
+diff --git a/src/ex_oct_16_selenium/__init__.py b/src/ex_oct_16_selenium/__init__.py
+deleted file mode 100644
+diff --git a/src/ex_oct_24_selenium/__init__.py b/src/ex_oct_24_selenium/__init__.py
+deleted file mode 100644
+diff --git a/allure_result/376d4179-b15e-4a32-90f5-fbf4f0df05da-result.json b/allure_result/376d4179-b15e-4a32-90f5-fbf4f0df05da-result.json
+deleted file mode 100644
+diff --git a/allure_result/439d36a8-56b0-40cd-aee6-5824acd758e0-result.json b/allure_result/439d36a8-56b0-40cd-aee6-5824acd758e0-result.json
+deleted file mode 100644
+diff --git a/src/__init__.py b/src/ex_nov5_webtable/__init__.py
+rename from src/__init__.py
+rename to src/ex_nov5_webtable/__init__.py
