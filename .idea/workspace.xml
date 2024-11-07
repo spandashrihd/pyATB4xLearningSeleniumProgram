@@ -4,16 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="339bf49c-a6e4-41ca-834e-995f6e67a995" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_oct26_Actions/test_task_3_oct_26.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_task_oct24.py" afterDir="false" />
+    <list default="true" id="339bf49c-a6e4-41ca-834e-995f6e67a995" name="Changes" comment="All commits of Oct 22">
+      <change afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/test_Lab36_wetable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/test_Lab37_webtable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/test_Lab38_dynamic_webtable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyATB4xLearningSeleniumProgram.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex_oct26/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/=/5d174353-d168-448f-b347-21f1f1aa42e9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/=/88147ec7-9021-47df-b658-2a564777dea2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/=/b27c0650-42a3-4bb4-b966-539e4119405b-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/=/f192781a-7783-42ed-9322-8bd8fb278a47-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Katolon_Selenium_IDE.side" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/1a9b025b-c8ea-46e7-a1b4-6450e63b8b87-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/262cda14-e417-41a4-96b9-84e90a96c127-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/33abd4a0-4f6a-454a-950f-d2788e371336-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/376d4179-b15e-4a32-90f5-fbf4f0df05da-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/3817eefa-0c16-45d3-a6f4-87ed53298aab-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/3df2b12b-8d3e-4f47-99ee-a004b4b3c428-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/3f49d02d-0bc5-4f85-8060-0e496296bc70-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/439d36a8-56b0-40cd-aee6-5824acd758e0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/452e8322-a11a-44c0-851d-a3451ad67b95-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/5e0c4b41-c956-457f-be72-adf3fa44a22e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/6e826951-d99f-4894-9dce-9a4a6d9fb389-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/82a124b4-6b0a-465b-bf3f-ea9497b45a7f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/844ea466-ffc9-460f-93f6-05c1b5856d93-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/91c72451-3fb8-4701-a052-d004d0f08d61-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/96032b68-7686-4c9a-8403-517788e950b3-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/9755cf83-a7cc-4657-8ad4-cf72aa2f44c4-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/9dbaf7c1-f712-4c58-a780-161dc9d1f46f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/a48257f9-5b16-46b5-a4e5-0e569bce5c79-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/b297cde9-9d20-496d-ab80-ea900ef81635-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/b91088c6-1338-4bbf-9220-0d88302fcd2a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/c772ae78-d431-41ac-882d-43cfa2e82b61-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/f36d06f2-2e55-4c6d-a44f-5aa7c0473d49-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure_result/ff59a1da-e039-4ffc-81ab-2b06ac136898-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex_nov5_webtable/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct26_Actions/test_oct26_task_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct26_Actions/test_task_3_oct_26.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_Lab01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_Lab03.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_Lb02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_16_selenium/test_task_Selenium_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/Task_HTML_form_creation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab04.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab05.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab06.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab07.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_Lab08.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_17_webdriver/test_task_oct_17.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab08.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab09.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_20_Locators/test_Lab12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex_oct_24_selenium/test_task_oct24.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +84,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;spandashrihd&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/spandashrihd/pyATB4xLearningSeleniumProgram.git&quot;,
+    &quot;accountId&quot;: &quot;25fdc0e0-b844-40c7-a781-e442f81f735d&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -90,7 +155,7 @@
     "Python tests.Python tests in test_oct26_task#2.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/win10/PycharmProjects/pyATB4xLearningSeleniumProgram",
+    "last_opened_file_path": "C:/Users/win10/PycharmProjects/PyATB4xLearningSeleniumPrograms",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -248,7 +313,31 @@
       <option name="presentableId" value="Default" />
       <updated>1729081859505</updated>
     </task>
+    <task id="LOCAL-00001" summary="All commits of Oct 22">
+      <option name="closed" value="true" />
+      <created>1730961184032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730961184032</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="All commits of Oct 22" />
+    <option name="LAST_COMMIT_MESSAGE" value="All commits of Oct 22" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -264,23 +353,9 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/ex_oct_20_Locators/test_task_oct19.py</url>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab15_explicit_wait.py</url>
           <line>10</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/ex_oct_24_selenium/test_Lab17.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/ex_oct_22_CSS_selector/test_Lab13_task_oct22.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
